@@ -1,0 +1,2038 @@
+fileFormatVersion: 2
+guid: 89d4c7e5eee093a41ba3e9470d759f86
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 972
+        width: 86
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aed87b918d6c6f4788acd9540a1b160
+      internalID: 1736661456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 791
+        width: 135
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e915bc1a02beaa949982b799e9a8f627
+      internalID: -1404614379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 980
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1895dfa3330fec84c854d19c8c324afe
+      internalID: -810373014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 912
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5278e1105644e7e40813813df9de074d
+      internalID: -1820852293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 516
+        width: 608
+        height: 504
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929d7483e5e76784793239de6bd56015
+      internalID: -1873471794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_5
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 978
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac92420e55eae104fa9d271d6c7dc58d
+      internalID: -89141262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_6
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 942
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9845880b01335de43bbbfc78dc958415
+      internalID: -1255534041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_7
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 636
+        width: 284
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cbca91b2d25b54e8fe5f7df9fe2093
+      internalID: 190520396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_8
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 944
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5dc0708beb26a54c8d255c66c969d46
+      internalID: -556601517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 667
+        width: 165
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1860794b4061b242aefdb4bbae5490d
+      internalID: 1722607406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_10
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 808
+        width: 99
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029f9d9cdb2ec2a49bf00d1745d4c147
+      internalID: -1347552492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_11
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 836
+        width: 73
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c45ff14890990458b177b51fc7cef0
+      internalID: -378189532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_12
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 709
+        width: 227
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fdefa4f8d02ff4ab92799b465a42a4
+      internalID: -425073300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_13
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 644
+        width: 115
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e1f5cf098ce1e41b139f7c65036e63
+      internalID: 842062024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_14
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 606
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f8ee1ea1cfd0ca418d4676839c13784
+      internalID: -1434802444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_15
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 634
+        width: 74
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fe3900f2d003344b5580290549d333
+      internalID: 2071381220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_16
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 671
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f348df778f3f78d43a97b2dd00eef374
+      internalID: 1456235260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 525
+        width: 120
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfc84e0c4b6ee148b334329401c7925
+      internalID: -947524174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_18
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 617
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b906b1bd109134299f3c47571fd038
+      internalID: -726648225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_19
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 288
+        width: 280
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6171f3710d9f6a419163e3ab2fcadf7
+      internalID: 1381074307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_20
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 532
+        width: 119
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01fb9fc4f53f3c4dbd12091dafc65f9
+      internalID: 1029815900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_21
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 600
+        width: 79
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d1d38ee0f2f5f4285404128020dd38
+      internalID: 141146587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_22
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 588
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6603602572c9a7948a9dc81e48ca4e87
+      internalID: -1941189955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 438
+        width: 190
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889745f080aae634290801e6b798c967
+      internalID: 1381003825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_24
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 552
+        width: 75
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33586c53b3a89e048a08a3dc37afe5d5
+      internalID: 1442118135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 404
+        width: 139
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc97d4ea0d3ecf4eb05a3e563febebb
+      internalID: 998061898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_26
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 468
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee42404f8b1d69b469bf85491cb2b125
+      internalID: 1869016705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_27
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 479
+        width: 75
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c3c0732c7857f49a76c0fc89527da9
+      internalID: -803982561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_28
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 474
+        width: 25
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c03a9083de5994ba1643d9f7d7d840
+      internalID: 1214136451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_29
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 467
+        width: 88
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd2f56a01d3f28b4d976bb45dd0a7ff9
+      internalID: -1462248910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_30
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 457
+        width: 209
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec7de28ff73f5947812607291fcd94f
+      internalID: -2098908033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_31
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 467
+        width: 76
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecef2b627f17974094c2dfe265b6172
+      internalID: -585909491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_32
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 424
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57447b4dea9609641898900acab134ed
+      internalID: 901141638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_33
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 312
+        width: 120
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d085868fad6214148a5f4d67a300c4cf
+      internalID: -307140663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_34
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 446
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eaf9eea32b4a9c47a656235b881f48a
+      internalID: -2019938057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_35
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 401
+        width: 94
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88844cc0b7014ba4b8664c29f065f2a1
+      internalID: -2032447165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_36
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 386
+        width: 62
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3862748a4a8aff469efb657b2a173c4
+      internalID: -91890224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_37
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 442
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31309c06edb6d7b4e97a5b7bc3509fac
+      internalID: -1086043981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_38
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 442
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c621af892e1c8d478a3e0d3e7b564f4
+      internalID: -2120119118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_39
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 360
+        width: 96
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603dcf2d4c7621641976c23ce810ccd5
+      internalID: 248422521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_40
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 40
+        width: 190
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4129b197264fd348b5dbc12b3a53215
+      internalID: -649234592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_41
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 430
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a90078d6837514fa2ade875d51c97b
+      internalID: 1826847122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_42
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 426
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4815708979f55445880a0f5329a03d9
+      internalID: -1634868207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_43
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 402
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60daf793c37edc742a26915991b7fc97
+      internalID: -2085080239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_44
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 418
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b3e87a0ab4ea845a6ae8039f445a34
+      internalID: -2030109983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_45
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 414
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fcd469bfa7ee74a899dae817b253ba
+      internalID: 358603219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_46
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 414
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b93c2b4bd8ce1742ae380ad55fd3003
+      internalID: -1358733047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_47
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 410
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f310d0be9dfb124b9751a6ad4d57958
+      internalID: -911827420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_48
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 406
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd451ea47fb9d74089daddca3f23915
+      internalID: -691681691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 125
+        height: 402
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db13b9d3280aa64f8afc856680d851d
+      internalID: 1558006281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_50
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 402
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d689de1b3661644a8f41913aa0644b
+      internalID: -1993018736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_51
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 398
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ad15908fce13c4482151b55e074825
+      internalID: -73833605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_52
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 363
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf02f0eb1dcc884085fba33b1bfd6b9
+      internalID: 2038115571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_53
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 394
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b1a5484643b0a4c983259a1e1b7cf9
+      internalID: -1240618081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_54
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 390
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7870422e22399e54aa103f03b43238c4
+      internalID: 1667242248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_55
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 308
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23682108b9482114ab7dcb3e0bfd1ae7
+      internalID: 406407051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_56
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 282
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a585b6c51c1fd49bf82dac8d2309bc
+      internalID: 506342735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_57
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 228
+        width: 157
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d21a689972dd584f9fc9af5de3c2fd2
+      internalID: -1705357000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_58
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 304
+        width: 98
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899d4c56fbe72c944b345dbf3d597ddb
+      internalID: 1920681712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_59
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 296
+        width: 46
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac81f6fcde293b42bd2b9bd00d71a5c
+      internalID: -770935938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_60
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 312
+        width: 58
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2c3e3dd05dc5f4281b8f1c66327b46
+      internalID: -1503926176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_61
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 180
+        width: 148
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f092b5d0a1800f84bb70424153e1bea0
+      internalID: -546654829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_62
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 180
+        width: 169
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afe23bd2045f574abaf0143bc2b326d
+      internalID: -1752055884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_63
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 274
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0addb350bd397bf4a97483523f1f065e
+      internalID: -142940654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_64
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 0
+        width: 276
+        height: 307
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55323c7136b16eb48bd9723c667835c3
+      internalID: -1342089364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_65
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 241
+        width: 100
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9eeb791ff7c68e4a8111713e42cb114
+      internalID: 859306544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_66
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 212
+        width: 68
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1e270fca2d51f45a2d6d8ede57a2db
+      internalID: -59173242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_67
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 117
+        width: 98
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad92f9c2c8c5284181422be5376dac7
+      internalID: -857528049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_68
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 229
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e363a33b7a7cd746b7ab0c1b41638fc
+      internalID: -263536934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_69
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 234
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8225e0aa95535c44fb82e1e703c998d6
+      internalID: 313697930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_70
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 338
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5fdf6ced657c243a0b6ae601039f30
+      internalID: 973100954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_71
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 175
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0716a4bfef4c944b5f4b6c9d865ba1
+      internalID: 739404517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_72
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 48
+        width: 98
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0f7ef5c36769c4084c0ae2ecf18ba5
+      internalID: -1260684079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_73
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 107
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e2b6bcb5321ec4bbd40bc4d8b1c493
+      internalID: 924948158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_74
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 97
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739fc51c439cb2141883b6c2ac49068f
+      internalID: -465132800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_75
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 97
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b1c67f63ec5114cae63f2ba35923cf
+      internalID: 539474138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_76
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 96
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffbae9378cd7154f8e7372528f38f1e
+      internalID: -525426516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_77
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 12
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c0336cc75417e42b3d61cd6f22aed7
+      internalID: 282083395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_78
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 21
+        width: 56
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821330115942d9849ab7628c38b49314
+      internalID: 696864787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_79
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 19
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102f5ad67f1ffff448725dc400bf6c2e
+      internalID: -1912309442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_80
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 29
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fe3a6d8598db7449d8949aea2ce66b
+      internalID: 427508027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_81
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 6
+        width: 190
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add7f909ccce50b49839669f8584fa29
+      internalID: -130586277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_82
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 3
+        width: 102
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe53e8902fce0904987d8b24c725a885
+      internalID: 1466947704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_83
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 3
+        width: 73
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431e36df470e65344a9f3360455125d0
+      internalID: 729776112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_84
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 12
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c185cd03263d03d44b1a8c31a6d85a53
+      internalID: 1091934832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Big3-resources.assets-3450_85
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 9
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dff843f7118bb42af9548e1d7141cd
+      internalID: -1721450122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Big3-resources.assets-3450_9: 1722607406
+      Big3-resources.assets-3450_36: -91890224
+      Big3-resources.assets-3450_25: 998061898
+      Big3-resources.assets-3450_38: -2120119118
+      Big3-resources.assets-3450_77: 282083395
+      Big3-resources.assets-3450_42: -1634868207
+      Big3-resources.assets-3450_47: -911827420
+      Big3-resources.assets-3450_72: -1260684079
+      Big3-resources.assets-3450_82: 1466947704
+      Big3-resources.assets-3450_23: 1381003825
+      Big3-resources.assets-3450_20: 1029815900
+      Big3-resources.assets-3450_55: 406407051
+      Big3-resources.assets-3450_50: -1993018736
+      Big3-resources.assets-3450_13: 842062024
+      Big3-resources.assets-3450_61: -546654829
+      Big3-resources.assets-3450_2: -810373014
+      Big3-resources.assets-3450_83: 729776112
+      Big3-resources.assets-3450_63: -142940654
+      Big3-resources.assets-3450_51: -73833605
+      Big3-resources.assets-3450_48: -691681691
+      Big3-resources.assets-3450_28: 1214136451
+      Big3-resources.assets-3450_14: -1434802444
+      Big3-resources.assets-3450_81: -130586277
+      Big3-resources.assets-3450_57: -1705357000
+      Big3-resources.assets-3450_18: -726648225
+      Big3-resources.assets-3450_31: -585909491
+      Big3-resources.assets-3450_58: 1920681712
+      Big3-resources.assets-3450_56: 506342735
+      Big3-resources.assets-3450_5: -89141262
+      Big3-resources.assets-3450_66: -59173242
+      Big3-resources.assets-3450_30: -2098908033
+      Big3-resources.assets-3450_76: -525426516
+      Big3-resources.assets-3450_22: -1941189955
+      Big3-resources.assets-3450_49: 1558006281
+      Big3-resources.assets-3450_41: 1826847122
+      Big3-resources.assets-3450_78: 696864787
+      Big3-resources.assets-3450_11: -378189532
+      Big3-resources.assets-3450_35: -2032447165
+      Big3-resources.assets-3450_43: -2085080239
+      Big3-resources.assets-3450_39: 248422521
+      Big3-resources.assets-3450_1: -1404614379
+      Big3-resources.assets-3450_37: -1086043981
+      Big3-resources.assets-3450_7: 190520396
+      Big3-resources.assets-3450_84: 1091934832
+      Big3-resources.assets-3450_74: -465132800
+      Big3-resources.assets-3450_80: 427508027
+      Big3-resources.assets-3450_8: -556601517
+      Big3-resources.assets-3450_46: -1358733047
+      Big3-resources.assets-3450_75: 539474138
+      Big3-resources.assets-3450_16: 1456235260
+      Big3-resources.assets-3450_53: -1240618081
+      Big3-resources.assets-3450_34: -2019938057
+      Big3-resources.assets-3450_32: 901141638
+      Big3-resources.assets-3450_65: 859306544
+      Big3-resources.assets-3450_71: 739404517
+      Big3-resources.assets-3450_26: 1869016705
+      Big3-resources.assets-3450_0: 1736661456
+      Big3-resources.assets-3450_6: -1255534041
+      Big3-resources.assets-3450_73: 924948158
+      Big3-resources.assets-3450_79: -1912309442
+      Big3-resources.assets-3450_29: -1462248910
+      Big3-resources.assets-3450_10: -1347552492
+      Big3-resources.assets-3450_40: -649234592
+      Big3-resources.assets-3450_17: -947524174
+      Big3-resources.assets-3450_24: 1442118135
+      Big3-resources.assets-3450_4: -1873471794
+      Big3-resources.assets-3450_69: 313697930
+      Big3-resources.assets-3450_62: -1752055884
+      Big3-resources.assets-3450_67: -857528049
+      Big3-resources.assets-3450_33: -307140663
+      Big3-resources.assets-3450_60: -1503926176
+      Big3-resources.assets-3450_21: 141146587
+      Big3-resources.assets-3450_44: -2030109983
+      Big3-resources.assets-3450_52: 2038115571
+      Big3-resources.assets-3450_27: -803982561
+      Big3-resources.assets-3450_54: 1667242248
+      Big3-resources.assets-3450_68: -263536934
+      Big3-resources.assets-3450_19: 1381074307
+      Big3-resources.assets-3450_70: 973100954
+      Big3-resources.assets-3450_12: -425073300
+      Big3-resources.assets-3450_45: 358603219
+      Big3-resources.assets-3450_59: -770935938
+      Big3-resources.assets-3450_64: -1342089364
+      Big3-resources.assets-3450_3: -1820852293
+      Big3-resources.assets-3450_15: 2071381220
+      Big3-resources.assets-3450_85: -1721450122
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

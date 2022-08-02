@@ -1,0 +1,3 @@
+﻿Name,HealthPoint,ManaPoint,Damage,Defense,Critical,Speed
+Orc,200,200,10,1,0,3
+Big Orc,500,500,25,2,0,4

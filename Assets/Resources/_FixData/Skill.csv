@@ -1,0 +1,15 @@
+﻿Id,SkillTemplateId,Name,Mana Use,Power Require,Level,Cooldown,Damage,Max Fight,Price,Effect,Reference Object,Image
+1,1,Kiếm Khí,10,1000,1,1,100,1000,0,Explosion1,FireSwordSplash1,WhiteSword
+2,1,Kiếm Khí,20,4000,2,1,105,1000,5,Explosion1,FireSwordSplash2,WhiteSword
+3,1,Kiếm Khí,30,10000,3,0.9,110,1000,10,Explosion1,FireSwordSplash3,WhiteSword
+4,1,Kiếm Khí,50,25000,4,0.8,120,1000,25,Explosion1,FireSwordSplash4,WhiteSword
+5,1,Kiếm Khí,70,60000,5,0.7,135,1000,50,Explosion1,FireSwordSplash5,WhiteSword
+6,1,Kiếm Khí,85,100000,6,0.6,170,1000,100,Explosion1,FireSwordSplash6,WhiteSword
+7,1,Kiếm Khí,100,200000,7,0.5,200,1000,150,Explosion1,FireSwordSplash7,WhiteSword
+8,2,Ám Khí,5,2000,1,3,200,5000,50,Explosion2,ShurikenSplash1,WhiteKunai
+9,2,Ám Khí,10,4000,2,2.9,210,5000,50,Explosion2,ShurikenSplash2,WhiteKunai
+10,2,Ám Khí,15,10000,3,2.7,230,5000,50,Explosion2,ShurikenSplash3,WhiteKunai
+11,2,Ám Khí,20,25000,4,2.5,250,5000,50,Explosion2,ShurikenSplash4,WhiteKunai
+12,2,Ám Khí,25,60000,5,2.3,280,5000,50,Explosion2,ShurikenSplash5,WhiteKunai
+13,2,Ám Khí,30,100000,6,2.1,300,5000,50,Explosion2,ShurikenSplash6,WhiteKunai
+14,2,Ám Khí,35,200000,7,1.9,350,5000,50,Explosion2,ShurikenSplash7,WhiteKunai

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - MapBounds
+  - Mob
+  - Ground
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Character
+  - Obstacle
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3208019305
+    locked: 0
+  - name: Mob
+    uniqueID: 80938983
+    locked: 0
+  - name: Player
+    uniqueID: 524749901
+    locked: 0
+  - name: Foreground
+    uniqueID: 734482449
+    locked: 0
+  - name: UI
+    uniqueID: 3515771845
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
