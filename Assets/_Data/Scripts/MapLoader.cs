@@ -61,9 +61,10 @@ public class MapLoader : MyMonoBehaviour
         foreach (Waypoint waypoint in GameData.GetInstance().waypoints) {
             if (waypoint.currentMapId == mapIndex) {
                 GameObject waypointObject = Instantiate(Resources.Load("Prefabs/Waypoint") as GameObject);
+                waypointObject.transform.parent = MapScreen.instance.gameObject.transform;
                 waypointObject.GetComponent<WaypointUI>().SetData(waypoint);
                 MapScreen.instance.AddWaypoint(waypointObject.GetComponent<WaypointUI>());
-                waypointObject.transform.parent = MapScreen.instance.gameObject.transform;
+                waypointObject.transform.localScale = new Vector3(1f, 1f, 1f);
                 //waypointObject.SetActive(false);
             }
         }

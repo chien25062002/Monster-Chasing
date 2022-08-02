@@ -17,6 +17,6 @@ public class StartGamePanel : Panel
 
     protected virtual void StartGame() {
         GameScreen.instance.StartScreenGame();
-        GameManager.instance.LoadMap(1);
+        GameManager.instance.LoadMap(2);
     }
 }
