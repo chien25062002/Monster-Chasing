@@ -46,7 +46,6 @@ public class MapLoader : MyMonoBehaviour
         GameScreen.instance.SetPanel(GameScreen.GAME_PANEL);
     }
 
-    // tạo quái đây a
     protected virtual void CreateMobInLoadedMap(int mapIndex) {
         Map loadedMap = MapManager.GetInstance().GetMapByIndex(mapIndex);
         foreach (MobPositionInMap mobPosition in loadedMap.mobPositions) {
@@ -54,6 +53,7 @@ public class MapLoader : MyMonoBehaviour
                 Transform spawnedMob = MobManager.instance.SpawnMobByName(mobPosition.mobName);
                 spawnedMob.position = new Vector3(mobPosition.x, mobPosition.y, mobPosition.z);
                 spawnedMob.GetComponent<Mob>().spawnPosition = spawnedMob.position;
+                spawnedMob.GetComponent<Mob>().RandomSkill();
                 spawnedMob.gameObject.SetActive(true);
                 loadedMap.spawnedMobs.Add(spawnedMob);
             }

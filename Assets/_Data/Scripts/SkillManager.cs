@@ -43,6 +43,19 @@ public class SkillManager : MyMonoBehaviour
         return null;
     }
 
+    public Transform SpawnSkillById(int id) {
+        Transform spawnedSkill;
+        GameObject spawnedObject;
+        foreach (Transform skill in skills) {
+            if (skill.GetComponent<ObjectSkill>().id == id) {
+                spawnedObject = Instantiate(skill.gameObject);
+                spawnedSkill = spawnedObject.transform;
+                return spawnedSkill;
+            }
+        }
+        return null;
+    }
+
     // Update is called once per frame
     void Update()
     {

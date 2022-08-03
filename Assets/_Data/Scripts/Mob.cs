@@ -23,7 +23,7 @@ public class Mob : MapObject
 
     [SerializeField] Vector3 leftBounds, rightBounds, topBounds, bottomBounds;
 
-    public Character focusedPlayer;
+    public Transform focusedPlayer;
 
     protected override void LoadComponents()
     {
@@ -59,6 +59,7 @@ public class Mob : MapObject
         SearchFocus();
         UpdateFocus();
         Vulnerability();
+        UpdateSkillCooldown();
 
         if (isStand) {
             standTimer += Time.deltaTime;
@@ -137,12 +138,61 @@ public class Mob : MapObject
             currentState = HURT_STATE;
             UpdateAnimation();
         }
+        if (isVulnerable) {
+            Attack();
+        }
+    }
+
+    public override void Attack()
+    {
+        if (focusedPlayer == null)
+            return;
+        if (!selectedSkill.isCooldown) {
+            selectedSkill.cooldownTimer = selectedSkill.cooldown;
+            selectedSkill.isCooldown = true;
+            
+            FaceLookAtEnemy();
+            Transform spawnedSkill = SkillManager.instance.SpawnSkillById(skills[0].id);
+            spawnedSkill.GetComponent<Weapon>().direction = this.faceSide;
+            spawnedSkill.GetComponent<Weapon>().owner = gameObject;
+            spawnedSkill.GetComponent<Weapon>().target = focusedPlayer.gameObject;
+            spawnedSkill.position = transform.position;
+            spawnedSkill.gameObject.SetActive(true);
+        }
+    }
+
+    public void UpdateSkillCooldown() {
+        if (selectedSkill.cooldownTimer > 0 && selectedSkill.isCooldown) {
+            selectedSkill.cooldownTimer -= Time.deltaTime;
+        } else {
+            selectedSkill.cooldownTimer = 0;
+            selectedSkill.isCooldown = false;
+        }
+    }
+
+    public override void FaceLookAtEnemy()
+    {
+        if (focusedPlayer != null) {
+            float dir = focusedPlayer.transform.position.x - transform.position.x;
+            if (dir > 0)
+                faceSide = 1;
+            if (dir < 0)
+                faceSide = -1;
+            TurnFace();
+        }
+    }
+
+    public void RandomSkill() {
+        int[] arrIndexSkill = {1, 8};
+        int skillId = arrIndexSkill[Random.Range(0, arrIndexSkill.Length)];
+        skills.Add(GameData.instance.GetSkillById(skillId));
+        selectedSkill = skills[0];
     }
 
     public override void SearchFocus() {
         Vector3 playerPosition = PlayerController.instance.character.transform.position;
         if (IsPlayerVisible(playerPosition))
-            focusedPlayer = PlayerController.instance.character;
+            focusedPlayer = PlayerController.instance.character.transform;
     }
 
     public override void UpdateFocus()
@@ -154,8 +204,8 @@ public class Mob : MapObject
 
     public bool IsPlayerVisible(Vector3 playerPosition) {
         Vector3 mobPos = transform.position;
-        if (playerPosition.x >= (mobPos.x - CameraFollow.instance.width / 2) && mobPos.x <= (mobPos.x + CameraFollow.instance.width / 2) &&
-        mobPos.y >= (mobPos.x - CameraFollow.instance.height / 2) && mobPos.y <= (mobPos.x + CameraFollow.instance.height / 2))
+        if (playerPosition.x >= (mobPos.x - CameraFollow.instance.width / 2) && playerPosition.x <= (mobPos.x + CameraFollow.instance.width / 2) &&
+        playerPosition.y >= (mobPos.y - CameraFollow.instance.height / 2) && playerPosition.y <= (mobPos.y + CameraFollow.instance.height / 2))
             return true;
         return false;
     }

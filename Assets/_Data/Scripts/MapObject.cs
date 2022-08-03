@@ -36,6 +36,7 @@ public class MapObject : MyMonoBehaviour, IMapObject
     public Object makeHurtObject;
 
     public List<Skill> skills = new List<Skill>();
+    public Skill selectedSkill;
 
     [SerializeField] protected float timer = 0;
 
@@ -100,6 +101,10 @@ public class MapObject : MyMonoBehaviour, IMapObject
 
     public virtual void Attack() {
 
+    }
+
+    public virtual void FaceLookAtEnemy() {
+        
     }
 
     protected virtual bool IsAlive() {

@@ -7,7 +7,6 @@ public class Character : MapObject, IMapObject
     public const string PLAYER_STATE = "State";
     public const int THROW_STATE = 10;
     
-    public Skill selectedSkill;
     protected bool isAttacking = false;
     public bool isMoving = false;
     public bool isFlying = false;
@@ -83,7 +82,7 @@ public class Character : MapObject, IMapObject
         
     }
 
-    public void FaceLookAtEnemy() {
+    public override void FaceLookAtEnemy() {
         if (mobFocus != null) {
             float dir = mobFocus.transform.position.x - transform.position.x;
             if (dir > 0)
@@ -141,6 +140,13 @@ public class Character : MapObject, IMapObject
     public Skill GetSkillByName(string name) {
         foreach (Skill skill in skills)
             if (name.Contains(skill.skillName))
+                return skill;
+        return null;
+    }
+
+    public Skill GetSkillById(int id) {
+        foreach (Skill skill in skills)
+            if (skill.id == id)
                 return skill;
         return null;
     }
