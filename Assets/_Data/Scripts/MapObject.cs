@@ -22,7 +22,8 @@ public class MapObject : MyMonoBehaviour, IMapObject
     [SerializeField] protected int def;
     [SerializeField] protected int crit;
     [SerializeField] protected int speed = 4;
-    [SerializeField] protected int mapIndex;
+    public int currentMapId;
+    public int lastMapIndex;
     [SerializeField] protected int power;
     public bool isAlive = true;
     public float faceSide = 1f;

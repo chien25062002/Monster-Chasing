@@ -7,6 +7,7 @@ public class GameManager : MyMonoBehaviour
     public static GameManager instance;
 
     public Map currentMap = null;
+    public bool isNewGame;
 
     protected override void Awake()
     {
@@ -15,6 +16,7 @@ public class GameManager : MyMonoBehaviour
             Debug.LogError("Only 1 GameManager instance is allowed to be created.");
         instance = this;
         DontDestroyOnLoad(gameObject);
+        isNewGame = true;
     }
 
     protected override void LoadComponents()

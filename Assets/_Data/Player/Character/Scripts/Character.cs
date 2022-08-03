@@ -210,6 +210,6 @@ public class Character : MapObject, IMapObject
             this.skills.Add(GameData.GetInstance().GetSkillById(int.Parse(sSkillId[i])));
         transform.position = new Vector3(float.Parse(data[6]), float.Parse(data[7]), float.Parse(data[8]));
         power = int.Parse(data[9]);
-        mapIndex = int.Parse(data[10]);
+        currentMapId = int.Parse(data[10]);
     }
 }

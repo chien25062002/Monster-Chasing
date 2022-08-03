@@ -30,20 +30,28 @@ public class MapLoader : MyMonoBehaviour
         }
         CreateMobInLoadedMap(mapIndex);
         LoadTileMap(mapIndex);
-        Vector3 characterPos = PlayerController.instance.character.transform.position;
-        characterPos.y = 0;
+        Vector3 characterPos;
+        if (GameManager.instance.isNewGame) {
+            characterPos = PlayerController.instance.character.transform.position;
+            characterPos.y = 0;
+            PlayerController.instance.character.currentMapId = 1;
+            GameManager.instance.isNewGame = false;
+        } else {
+            PlayerController.instance.character.currentMapId = mapIndex;
+            Transform waypoint = MapScreen.instance.GetWaypointWithLastId(PlayerController.instance.character.lastMapIndex);
+            characterPos = waypoint.GetComponent<WaypointUI>().charPos;
+            Debug.LogError(characterPos);
+        }
         PlayerController.instance.character.transform.position = characterPos;
         GameScreen.instance.SetPanel(GameScreen.GAME_PANEL);
     }
 
     // tạo quái đây a
     protected virtual void CreateMobInLoadedMap(int mapIndex) {
-        int id = 1;
         Map loadedMap = MapManager.GetInstance().GetMapByIndex(mapIndex);
         foreach (MobPositionInMap mobPosition in loadedMap.mobPositions) {
             if (mobPosition.mapIndex == mapIndex) {
                 Transform spawnedMob = MobManager.instance.SpawnMobByName(mobPosition.mobName);
-                spawnedMob.GetComponent<Mob>().id = id++;
                 spawnedMob.position = new Vector3(mobPosition.x, mobPosition.y, mobPosition.z);
                 spawnedMob.GetComponent<Mob>().spawnPosition = spawnedMob.position;
                 spawnedMob.gameObject.SetActive(true);
@@ -58,6 +66,7 @@ public class MapLoader : MyMonoBehaviour
     }
 
     protected virtual void LoadWaypoint(int mapIndex) {
+        MapScreen.instance.ClearWaypoint();
         foreach (Waypoint waypoint in GameData.GetInstance().waypoints) {
             if (waypoint.currentMapId == mapIndex) {
                 GameObject waypointObject = Instantiate(Resources.Load("Prefabs/Waypoint") as GameObject);

@@ -22,4 +22,10 @@ public class GameData
             if (skill.id == id) return skill;
         return null;
     }
+
+    public Waypoint GetWaypointById(int id) {
+        foreach (Waypoint waypoint in waypoints)
+            if (waypoint.currentMapId == id) return waypoint;
+        return null;
+    }
 }

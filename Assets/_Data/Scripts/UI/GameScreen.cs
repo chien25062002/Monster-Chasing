@@ -116,6 +116,8 @@ public class GameScreen : MyMonoBehaviour
     }
 
     public bool IsMobInCamera(Transform mob) {
+        if (mob == null)
+            return false;
         Vector3 mobPos = mob.position;
         if (mobPos.x >= CameraFollow.instance.camLeftBounds && mobPos.x <= CameraFollow.instance.camRightBounds &&
         mobPos.y >= CameraFollow.instance.camBottomBounds && mobPos.y <= CameraFollow.instance.camTopBounds)

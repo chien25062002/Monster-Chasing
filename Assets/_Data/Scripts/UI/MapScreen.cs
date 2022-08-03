@@ -22,6 +22,28 @@ public class MapScreen : MyMonoBehaviour
         waypoints.Add(waypointUI);
     }
 
+    public void ClearWaypoint() {
+        foreach (WaypointUI waypoint in waypoints) {
+            if (waypoint != null) {
+                waypoint.RemoveWayPoint();
+            }
+        }
+    }
+
+    public Transform GetWaypointWithId(int id) {
+        foreach (WaypointUI waypointUI in waypoints)
+            if (waypointUI.currentMapId == id)
+                return waypointUI.transform;
+        return null;
+    }
+
+    public Transform GetWaypointWithLastId(int lastId) {
+        foreach (WaypointUI waypointUI in waypoints)
+            if (waypointUI.nextMapId == lastId)
+                return waypointUI.transform;
+        return null;
+    }
+
     protected override void LoadComponents()
     {
         

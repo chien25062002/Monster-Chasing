@@ -1,3 +1,3 @@
-﻿CurrentMapName,CurrentMapId,NextMapName,NextMapId,PosX,PosY,PosZ
-Bờ biển hoang vu,1,Cửa biển,2,109,1,0
-Cửa biển,2,Bờ biển hoang vu,1,-45,1,0
+﻿CurrentMapName,CurrentMapId,NextMapName,NextMapId,PosX,PosY,PosZ,Align,CharX,CharY,CharZ
+Bờ biển hoang vu,1,Cửa biển,2,105,1,0,2,105,-2.5,0
+Cửa biển,2,Bờ biển hoang vu,1,-45,1,0,0,-45,-4.5,0
