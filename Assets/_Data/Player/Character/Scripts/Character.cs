@@ -184,6 +184,11 @@ public class Character : MapObject, IMapObject
 
     }
 
+    public override void OnDeath()
+    {
+        isDeath = true;
+    }
+
     public Vector3 Position {
         get { return new Vector3(x, y, transform.position.z); }
     }
@@ -206,8 +211,10 @@ public class Character : MapObject, IMapObject
     }
 
     public void UpdateData(string[] data) {
-        healthPoint = int.Parse(data[0]);
-        manaPoint = int.Parse(data[1]);
+        healthPointHolder = int.Parse(data[0]);
+        healthPoint = healthPointHolder;
+        manaPointHolder = int.Parse(data[1]);
+        manaPoint = manaPointHolder;
         damage = int.Parse(data[2]);
         def = int.Parse(data[3]);
         crit = int.Parse(data[4]);

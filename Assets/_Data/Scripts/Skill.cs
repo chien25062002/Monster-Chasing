@@ -28,6 +28,24 @@ public class Skill
  
     }
 
+    public Skill Clone() {
+        Skill cloneSkill = new Skill();
+        cloneSkill.id = id;;
+        cloneSkill.skillTemplateId = skillTemplateId;
+        cloneSkill.skillName = skillName;
+        cloneSkill.manaUse = manaUse;
+        cloneSkill.powerRequire = powerRequire;
+        cloneSkill.level = level;
+        cloneSkill.cooldown = cooldown;
+        cloneSkill.damage = damage;
+        cloneSkill.maxFight = maxFight;
+        cloneSkill.price = price;
+        cloneSkill.effectName = effectName;
+        cloneSkill.referenceObjectName = referenceObjectName;
+        cloneSkill.imageName = imageName;
+        return cloneSkill;
+    }
+
     public Skill(string[] data) {
         id = int.Parse(data[0]);
         skillTemplateId = int.Parse(data[1]);

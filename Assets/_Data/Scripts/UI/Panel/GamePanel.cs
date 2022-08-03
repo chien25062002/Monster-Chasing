@@ -67,6 +67,10 @@ public class GamePanel : Panel
         PlayerController.instance.playerMovement.moveY = moveVertical;
     }
 
+    public void UpdateCharacter() {
+        
+    }
+
     public void SkillClicked(Button skill) {
         if (PlayerController.instance.character.mobFocus == null)
             return;

@@ -11,6 +11,7 @@ public class GameScreen : MyMonoBehaviour
     public const int SHOP_PANEL = 2;
     public const int START_GAME_PANEL = 3;
     public const int LOADING_GAME_SCREEN_PANEL = 4;
+    public const int DEATH_PANEL = 5;
 
     public List<Transform> visibleMobs = new List<Transform>();
 
@@ -20,6 +21,7 @@ public class GameScreen : MyMonoBehaviour
     public MenuPanel menuPanel;
     public StartGamePanel startGamePanel;
     public LoadingScreenPanel loadingScreenPanel;
+    public DeathPanel deathPanel;
 
     public int width, height;
 
@@ -34,7 +36,14 @@ public class GameScreen : MyMonoBehaviour
     }
 
     private void Update() {
+        UpdateCharacter();
         UpdateVisibleMob();
+    }
+
+    public void UpdateCharacter() {
+        if (PlayerController.instance.character.isDeath) {
+            this.SetPanel(DEATH_PANEL);
+        }
     }
 
     protected override void LoadComponents()
@@ -53,6 +62,7 @@ public class GameScreen : MyMonoBehaviour
         menuPanel = this.transform.Find("MenuPanel").GetComponent<MenuPanel>();
         startGamePanel = this.transform.Find("StartGamePanel").GetComponent<StartGamePanel>();
         loadingScreenPanel = this.transform.Find("LoadingScreenPanel").GetComponent<LoadingScreenPanel>();
+        deathPanel = this.transform.Find("DeathPanel").GetComponent<DeathPanel>();
         HideAllPanel();
     }
 
@@ -82,6 +92,9 @@ public class GameScreen : MyMonoBehaviour
                 break;
             case LOADING_GAME_SCREEN_PANEL:
                 currentPanel = loadingScreenPanel;
+                break;
+            case DEATH_PANEL:
+                currentPanel = deathPanel;
                 break;
         }
         Show();

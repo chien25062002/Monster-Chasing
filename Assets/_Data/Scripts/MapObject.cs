@@ -22,6 +22,7 @@ public class MapObject : MyMonoBehaviour, IMapObject
     [SerializeField] protected int def;
     [SerializeField] protected int crit;
     [SerializeField] protected int speed = 4;
+    public bool isDeath;
     public int currentMapId;
     public int lastMapIndex;
     [SerializeField] protected int power;
@@ -61,14 +62,24 @@ public class MapObject : MyMonoBehaviour, IMapObject
         return healthPoint;
     }
 
+    public int GetHealthPointHolder() {
+        return healthPointHolder;
+    }
+
     public void GetDamage(int damage) {
         this.healthPoint -= damage;
-        if (this.healthPoint < 0)
+        if (this.healthPoint < 0) {
             this.healthPoint = 0;
+            isDeath = true;
+        }
     }
 
     public int GetManaPoint() {
         return manaPoint;
+    }
+
+    public int GetManaPointHolder() {
+        return manaPointHolder;
     }
 
     public int GetDamage() {
@@ -105,6 +116,10 @@ public class MapObject : MyMonoBehaviour, IMapObject
 
     public virtual void FaceLookAtEnemy() {
         
+    }
+
+    public virtual void OnDeath() {
+
     }
 
     protected virtual bool IsAlive() {

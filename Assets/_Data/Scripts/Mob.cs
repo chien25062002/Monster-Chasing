@@ -13,6 +13,7 @@ public class Mob : MapObject
     protected float standTime = 3f;
     protected float movingTime = 4f;
     protected float reSpawnTime = 4f;
+    protected float skillCooldown = 10;
     [SerializeField] protected float reSpawnTimer = 0f;
     [SerializeField] protected bool isStand = true;
     [SerializeField] protected bool isMoving = false;
@@ -129,6 +130,7 @@ public class Mob : MapObject
         transform.position = spawnPosition;
         healthPoint = healthPointHolder;
         isAlive = true;
+        isVulnerable = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
 
@@ -148,7 +150,7 @@ public class Mob : MapObject
         if (focusedPlayer == null)
             return;
         if (!selectedSkill.isCooldown) {
-            selectedSkill.cooldownTimer = selectedSkill.cooldown;
+            selectedSkill.cooldownTimer = skillCooldown;
             selectedSkill.isCooldown = true;
             
             FaceLookAtEnemy();
@@ -160,13 +162,13 @@ public class Mob : MapObject
             spawnedSkill.gameObject.SetActive(true);
         }
     }
-
+    public float cooldownTimer;
     public void UpdateSkillCooldown() {
-        if (selectedSkill.cooldownTimer > 0 && selectedSkill.isCooldown) {
+        if (selectedSkill.isCooldown) {
             selectedSkill.cooldownTimer -= Time.deltaTime;
-        } else {
-            selectedSkill.cooldownTimer = 0;
-            selectedSkill.isCooldown = false;
+            cooldownTimer = selectedSkill.cooldownTimer;
+            if (selectedSkill.cooldownTimer <= 0)
+                selectedSkill.isCooldown = false;
         }
     }
 
@@ -183,9 +185,9 @@ public class Mob : MapObject
     }
 
     public void RandomSkill() {
-        int[] arrIndexSkill = {1, 8};
+        int[] arrIndexSkill = {8};
         int skillId = arrIndexSkill[Random.Range(0, arrIndexSkill.Length)];
-        skills.Add(GameData.instance.GetSkillById(skillId));
+        skills.Add(GameData.instance.GetSkillById(skillId).Clone());
         selectedSkill = skills[0];
     }
 
