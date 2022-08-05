@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 10}
+  m_Size: {x: 1, y: 13}
   m_EdgeRadius: 0
 --- !u!114 &1599767890
 MonoBehaviour:
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94dbd8e6d07ae24ba0e3dc6b51af737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trueParent: {fileID: 0}
 --- !u!1 &4754534221330863346
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +176,7 @@ MonoBehaviour:
   imageWidth: 0
   imageHeight: 0
   align: 0
+  charPos: {x: 0, y: 0, z: 0}
   waypointCollision: {fileID: 0}
 --- !u!1 &7663282024178179039
 GameObject:

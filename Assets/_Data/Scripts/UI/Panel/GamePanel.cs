@@ -24,7 +24,6 @@ public class GamePanel : Panel
     {
         base.LoadComponents();
         fixedJoystick = FindObjectOfType<FixedJoystick>();
-
         this.LoadSkillBar();
         this.LoadButton();
         focusImage = MyImage.CreateImage("FocusArrow");

@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17366e61f4761a746bf0547e919f61db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDir: 0
+  moveX: 0
+  moveY: 0
 --- !u!1 &326698463673261832
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,9 +122,11 @@ GameObject:
   - component: {fileID: 326698463673261845}
   - component: {fileID: 326698463673261846}
   - component: {fileID: 326698463673261842}
+  - component: {fileID: 914529091}
+  - component: {fileID: 914529098}
   m_Layer: 6
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,8 +256,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.104372025, y: -0.26672816}
-  m_Size: {x: 1.6265955, y: 4.4209943}
+  m_Offset: {x: 0.104372025, y: -1.2265329}
+  m_Size: {x: 1.6265955, y: 2.5013847}
   m_Direction: 0
 --- !u!114 &326698463673261842
 MonoBehaviour:
@@ -268,7 +271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd4310f2a2b68b42be40dc19c25aac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  objectName: 
+  healthPointHolder: 0
+  manaPointHolder: 0
   currentState: 0
   healthPoint: 0
   manaPoint: 0
@@ -276,16 +281,51 @@ MonoBehaviour:
   def: 0
   crit: 0
   speed: 4
+  isDeath: 0
+  currentMapId: 0
+  lastMapIndex: 0
+  power: 0
+  isAlive: 1
   faceSide: 1
   x: 0
   y: 0
   position: {x: 0, y: 0, z: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
   isGrounded: 0
-  skills: []
+  isVulnerable: 0
+  makeHurtObject: {fileID: 0}
   timer: 0
   sr: {fileID: 326698463673261844}
   anim: {fileID: 326698463673261843}
   isMoving: 0
+  isFlying: 0
+  mobFocus: {fileID: 0}
+  moveX: 0
+  moveY: 0
+--- !u!114 &914529091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326698463673261832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de9091b1cd5c4714ebb77706a612e775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &914529098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326698463673261832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d44f2a1631201d41bea406cf573731d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &326698464325698830
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5140715769527188232}
   m_Layer: 6
-  m_Name: LeftThrowingPosition (1)
+  m_Name: LeftThrowingPosition
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0

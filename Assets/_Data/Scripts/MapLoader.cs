@@ -40,13 +40,14 @@ public class MapLoader : MyMonoBehaviour
             PlayerController.instance.character.currentMapId = mapIndex;
             Transform waypoint = MapScreen.instance.GetWaypointWithLastId(PlayerController.instance.character.lastMapIndex);
             characterPos = waypoint.GetComponent<WaypointUI>().charPos;
-            Debug.LogError(characterPos);
         }
         PlayerController.instance.character.transform.position = characterPos;
         GameScreen.instance.SetPanel(GameScreen.GAME_PANEL);
     }
 
     protected virtual void CreateMobInLoadedMap(int mapIndex) {
+        if (mapIndex == 3)
+            return;
         Map loadedMap = MapManager.GetInstance().GetMapByIndex(mapIndex);
         foreach (MobPositionInMap mobPosition in loadedMap.mobPositions) {
             if (mobPosition.mapIndex == mapIndex) {

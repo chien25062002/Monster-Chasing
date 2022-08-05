@@ -28,7 +28,6 @@ public class HealthPointUI : MyMonoBehaviour
         mpHolder = character.GetManaPointHolder();
         hpPercent = ((float) character.GetHealthPoint()) / character.GetHealthPointHolder();
         mpPercent = ((float) character.GetManaPoint()) / character.GetManaPointHolder();
-        Debug.Log("hpPercent: " + hpPercent + " mpPercent: " + mpPercent);
 
         hpFillBar.fillAmount = hpPercent;
         mpFillBar.fillAmount = mpPercent;
