@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         if (moveX != 0 && character.isGrounded) {
             character.CurrentState = Character.RUN_STATE;
             character.isMoving = true;
+            character.isStanding = false;
         }
         if (moveX > 0) {
             character.faceSide = 1f;
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             character.isMoving = false;
             character.CurrentState = Character.STAND_STATE;
+            character.isStanding = true;
         }
 
         if (character.isGrounded) {

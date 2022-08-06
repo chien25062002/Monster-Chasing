@@ -38,15 +38,23 @@ public class MapLoader : MyMonoBehaviour
             GameManager.instance.isNewGame = false;
         } else {
             PlayerController.instance.character.currentMapId = mapIndex;
-            Transform waypoint = MapScreen.instance.GetWaypointWithLastId(PlayerController.instance.character.lastMapIndex);
-            characterPos = waypoint.GetComponent<WaypointUI>().charPos;
+            Transform waypoint;
+            if (!PlayerController.instance.character.goHome) {
+                waypoint = MapScreen.instance.GetWaypointWithLastId(PlayerController.instance.character.lastMapIndex);
+                characterPos = waypoint.GetComponent<WaypointUI>().charPos;
+            } else {
+                waypoint = MapScreen.instance.GetWaypointWithLastId(1);
+                PlayerController.instance.character.lastMapIndex = 1;
+                PlayerController.instance.character.goHome = false;
+                characterPos = new Vector3(0, 0, 0);
+            }
         }
         PlayerController.instance.character.transform.position = characterPos;
         GameScreen.instance.SetPanel(GameScreen.GAME_PANEL);
     }
 
     protected virtual void CreateMobInLoadedMap(int mapIndex) {
-        if (mapIndex == 3)
+        if (mapIndex == 1)
             return;
         Map loadedMap = MapManager.GetInstance().GetMapByIndex(mapIndex);
         foreach (MobPositionInMap mobPosition in loadedMap.mobPositions) {

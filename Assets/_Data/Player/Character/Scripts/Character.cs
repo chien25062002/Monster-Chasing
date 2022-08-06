@@ -13,6 +13,7 @@ public class Character : MapObject, IMapObject
     public Mob mobFocus;
     public float moveX;
     public float moveY;
+    public bool goHome;
 
     private void Update() {
         SearchFocus();
@@ -187,6 +188,12 @@ public class Character : MapObject, IMapObject
     public override void OnDeath()
     {
         isDeath = true;
+    }
+
+    public virtual void Recovery() {
+        isDeath = false;
+        healthPoint = healthPointHolder;
+        manaPoint = manaPointHolder;
     }
 
     public Vector3 Position {

@@ -37,6 +37,7 @@ public class DataPersistanceManager
 
     protected virtual void LoadDefaultChracterData() {
         PlayerController.instance.character.UpdateData(CSVReader.LoadDefaultCharacterData());
+        Pet.instance.UpdateData(CSVReader.LoadPetData());
     }
 
     protected virtual void LoadSkillData() {

@@ -137,4 +137,10 @@ public class GameScreen : MyMonoBehaviour
             return true;
         return false;
     }
+
+    public void CharacterGoHome() {
+        PlayerController.instance.character.goHome = true;
+        MapLoader.instance.LoadMap(1);
+        PlayerController.instance.character.Recovery();
+    }
 }

@@ -28,6 +28,7 @@ public class MapObject : MyMonoBehaviour, IMapObject
     [SerializeField] protected int power;
     public bool isAlive = true;
     public float faceSide = 1f;
+    public bool isStanding;
     [SerializeField] protected float x;
     [SerializeField] protected float y;
     public Vector3 position;

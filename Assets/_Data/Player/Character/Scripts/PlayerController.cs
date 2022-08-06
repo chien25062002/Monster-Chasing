@@ -7,7 +7,6 @@ public class PlayerController : MyMonoBehaviour
     public static PlayerController instance;
 
     public PlayerMovement playerMovement;
-    public PlayerCombat playerCombat;
     public Animator anim;
     public Character character;
 

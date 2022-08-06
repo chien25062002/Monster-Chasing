@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class DeathPanel : Panel
 {
-    // Start is called before the first frame update
-    void Start()
+    public Button waitButton;
+    public Button goHomeButton;
+    public Button recoveryButton;
+
+    protected override void LoadComponents()
     {
-        
+        goHomeButton = transform.Find("DeathButton/GoHomeButton").GetComponent<Button>();
+        recoveryButton = transform.Find("DeathButton/RecoveryButton").GetComponent<Button>();
+        SetButtonEvent();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    protected void SetButtonEvent() {
+        goHomeButton.onClick.AddListener(delegate {GameScreen.instance.CharacterGoHome();});
     }
 }

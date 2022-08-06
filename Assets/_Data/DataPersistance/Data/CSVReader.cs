@@ -15,6 +15,7 @@ public class CSVReader
     public static string SKILL_FILE = "Skill";
     public static string CHARACTER_FILE = "Character";
     public static string WAYPOINT_FILE = "Waypoint";
+    public static string PET_FILE = "Pet";
 
     public static string[] Read (string fileName) {
         string fullPath = dataPathDir + fileName;
@@ -79,6 +80,11 @@ public class CSVReader
 
     public static string[] LoadDefaultCharacterData() {
         string[] readedData = Read(CHARACTER_FILE);
+        return readedData[1].Split(splitColumnCharacter);
+    }
+
+    public static string[] LoadPetData() {
+        string[] readedData = Read(PET_FILE);
         return readedData[1].Split(splitColumnCharacter);
     }
 
