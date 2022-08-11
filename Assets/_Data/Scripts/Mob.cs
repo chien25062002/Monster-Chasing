@@ -24,7 +24,7 @@ public class Mob : MapObject
 
     [SerializeField] Vector3 leftBounds, rightBounds, topBounds, bottomBounds;
 
-    public Transform focusedPlayer;
+    public Transform focusedObject;
 
     protected override void LoadComponents()
     {
@@ -147,7 +147,7 @@ public class Mob : MapObject
 
     public override void Attack()
     {
-        if (focusedPlayer == null)
+        if (focusedObject == null)
             return;
         if (!selectedSkill.isCooldown) {
             selectedSkill.cooldownTimer = skillCooldown;
@@ -157,7 +157,7 @@ public class Mob : MapObject
             Transform spawnedSkill = SkillManager.instance.SpawnSkillById(skills[0].id);
             spawnedSkill.GetComponent<Weapon>().direction = this.faceSide;
             spawnedSkill.GetComponent<Weapon>().owner = gameObject;
-            spawnedSkill.GetComponent<Weapon>().target = focusedPlayer.gameObject;
+            spawnedSkill.GetComponent<Weapon>().target = focusedObject.gameObject;
             spawnedSkill.position = transform.position;
             spawnedSkill.gameObject.SetActive(true);
         }
@@ -174,8 +174,8 @@ public class Mob : MapObject
 
     public override void FaceLookAtEnemy()
     {
-        if (focusedPlayer != null) {
-            float dir = focusedPlayer.transform.position.x - transform.position.x;
+        if (focusedObject != null) {
+            float dir = focusedObject.transform.position.x - transform.position.x;
             if (dir > 0)
                 faceSide = 1;
             if (dir < 0)
@@ -192,16 +192,21 @@ public class Mob : MapObject
     }
 
     public override void SearchFocus() {
+        if (makeHurtObject != null) {
+            focusedObject = makeHurtObject.transform;
+            return;
+        }
         Vector3 playerPosition = PlayerController.instance.character.transform.position;
         if (IsPlayerVisible(playerPosition))
-            focusedPlayer = PlayerController.instance.character.transform;
+            focusedObject = PlayerController.instance.character.transform;
     }
 
     public override void UpdateFocus()
     {
-        Vector3 playerPosition = PlayerController.instance.character.transform.position;
-        if (!IsPlayerVisible(playerPosition))
-            focusedPlayer = null;
+        if (focusedObject != null) {
+            if (!IsPlayerVisible(focusedObject.position))
+                focusedObject = null;
+        }
     }
 
     public bool IsPlayerVisible(Vector3 playerPosition) {

@@ -35,7 +35,7 @@ public class MapObject : MyMonoBehaviour, IMapObject
     public Vector3 spawnPosition;
     public bool isGrounded;
     public bool isVulnerable;
-    public Object makeHurtObject;
+    public Transform makeHurtObject;
 
     public List<Skill> skills = new List<Skill>();
     public Skill selectedSkill;
@@ -67,7 +67,8 @@ public class MapObject : MyMonoBehaviour, IMapObject
         return healthPointHolder;
     }
 
-    public void GetDamage(int damage) {
+    public void GetDamage(int damage, Transform makeHurtObject) {
+        this.makeHurtObject = makeHurtObject;
         this.healthPoint -= damage;
         if (this.healthPoint < 0) {
             this.healthPoint = 0;

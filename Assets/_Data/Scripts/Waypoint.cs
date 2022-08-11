@@ -23,12 +23,12 @@ public class Waypoint
         currentMapId = int.Parse(data[1]);
         nextMapName = data[2];
         nextMapId = int.Parse(data[3]);
-        x = float.Parse(data[4]);
-        y = float.Parse(data[5]);
-        z = float.Parse(data[6]);
+        x = mSystem.ParseFloat(data[4]);
+        y = mSystem.ParseFloat(data[5]);
+        z = mSystem.ParseFloat(data[6]);
         align = int.Parse(data[7]);
-        charX = float.Parse(data[8]);
-        charY = float.Parse(data[9]);
-        charZ = float.Parse(data[10]);
+        charX = mSystem.ParseFloat(data[8]);
+        charY = mSystem.ParseFloat(data[9]);
+        charZ = mSystem.ParseFloat(data[10]);
     }
 }

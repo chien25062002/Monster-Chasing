@@ -7,6 +7,7 @@ TagManager:
   - MapBounds
   - Mob
   - Ground
+  - Pet
   layers:
   - Default
   - TransparentFX

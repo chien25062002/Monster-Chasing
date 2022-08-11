@@ -23,9 +23,19 @@ public class MapScreen : MyMonoBehaviour
     }
 
     public void ClearWaypoint() {
-        foreach (WaypointUI waypoint in waypoints) {
+        foreach (WaypointUI waypoint in waypoints.ToArray()) {
             if (waypoint != null) {
                 waypoint.RemoveWayPoint();
+                if (waypoint != null)
+                    waypoints.Remove(waypoint);
+            }
+        }
+    }
+
+    public void Show() {
+        foreach (WaypointUI waypoint in waypoints) {
+            if (waypoint != null) {
+                Debug.Log(waypoint);
             }
         }
     }
@@ -39,8 +49,9 @@ public class MapScreen : MyMonoBehaviour
 
     public Transform GetWaypointWithLastId(int lastId) {
         foreach (WaypointUI waypointUI in waypoints)
-            if (waypointUI.nextMapId == lastId)
+            if (waypointUI.nextMapId == lastId) {
                 return waypointUI.transform;
+            }
         return null;
     }
 

@@ -40,6 +40,7 @@ public class WaypointUI : MonoBehaviour
         y = waypoint.y;
         z = waypoint.z;
         align = waypoint.align;
+        Debug.Log("waypoint.y = " + waypoint.charY);
         charPos = new Vector3(waypoint.charX, waypoint.charY, waypoint.charZ);
 
         transform.GetComponentInChildren<Text>().text = nextMapName;
@@ -56,7 +57,7 @@ public class WaypointUI : MonoBehaviour
                 break;
         }
         posInScreen.y -= imageHeight / 2;
-        waypointCollision.transform.parent = MapScreen.instance.transform;
+        waypointCollision.transform.SetParent(MapScreen.instance.transform, true);
         waypointCollision.transform.position = Camera.main.ScreenToWorldPoint(posInScreen);
     }
 

@@ -50,10 +50,10 @@ public class Skill
         id = int.Parse(data[0]);
         skillTemplateId = int.Parse(data[1]);
         skillName = data[2];
-        manaUse = float.Parse(data[3]);
+        manaUse = mSystem.ParseFloat(data[3]);
         powerRequire = int.Parse(data[4]);
         level = int.Parse(data[5]);
-        cooldown = float.Parse(data[6]);
+        cooldown = mSystem.ParseFloat(data[6]);
         damage = int.Parse(data[7]);
         maxFight = int.Parse(data[8]);
         price = int.Parse(data[9]);

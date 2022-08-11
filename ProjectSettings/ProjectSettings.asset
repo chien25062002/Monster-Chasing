@@ -61,11 +61,11 @@ PlayerSettings:
   allowedAutorotateToLandscapeRight: 1
   allowedAutorotateToLandscapeLeft: 1
   useOSAutorotation: 1
-  use32BitDisplayBuffer: 0
+  use32BitDisplayBuffer: 1
   preserveFramebufferAlpha: 0
-  disableDepthAndStencilBuffers: 0
+  disableDepthAndStencilBuffers: 1
   androidStartInFullscreen: 1
-  androidRenderOutsideSafeArea: 1
+  androidRenderOutsideSafeArea: 0
   androidUseSwappy: 1
   androidBlitType: 0
   androidResizableWindow: 0
@@ -73,7 +73,7 @@ PlayerSettings:
   androidDefaultWindowHeight: 1080
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
-  androidFullscreenMode: 1
+  androidFullscreenMode: 3
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 0

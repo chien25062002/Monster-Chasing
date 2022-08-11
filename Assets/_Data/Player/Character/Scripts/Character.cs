@@ -15,7 +15,7 @@ public class Character : MapObject, IMapObject
     public float moveY;
     public bool goHome;
 
-    private void Update() {
+    protected virtual void Update() {
         SearchFocus();
         UpdateFocus();
     }
@@ -217,7 +217,7 @@ public class Character : MapObject, IMapObject
         set { currentState = value; }
     }
 
-    public void UpdateData(string[] data) {
+    public virtual void UpdateData(string[] data) {
         healthPointHolder = int.Parse(data[0]);
         healthPoint = healthPointHolder;
         manaPointHolder = int.Parse(data[1]);
@@ -227,7 +227,7 @@ public class Character : MapObject, IMapObject
         crit = int.Parse(data[4]);
         string[] sSkillId = data[5].Split(";");
         for (int i = 0; i < sSkillId.Length; i++)
-            this.skills.Add(GameData.GetInstance().GetSkillById(int.Parse(sSkillId[i])));
+            this.skills.Add(GameData.GetInstance().GetSkillById(int.Parse(sSkillId[i])).Clone());
         transform.position = new Vector3(float.Parse(data[6]), float.Parse(data[7]), float.Parse(data[8]));
         power = int.Parse(data[9]);
         currentMapId = int.Parse(data[10]);

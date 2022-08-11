@@ -20,8 +20,8 @@ public class MobPositionInMap
         mapName = data[0];
         mapIndex = int.Parse(data[1]);
         mobName = data[2];
-        x = float.Parse(data[3]);
-        y = float.Parse(data[4]);
-        z = float.Parse(data[5]);
+        x = mSystem.ParseFloat(data[3]);
+        y = mSystem.ParseFloat(data[4]);
+        z = mSystem.ParseFloat(data[5]);
     }
 }

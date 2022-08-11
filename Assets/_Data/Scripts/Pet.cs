@@ -21,8 +21,39 @@ public class Pet : Character
         isMovingToRight = true;
     }
 
-    private void Update() {
-        //OnHeadOfCharacter();
+    protected override void Update() {
+        base.Update();
+        Attack();
+        UpdateSkillCooldown();
+    }
+
+    private float skillCooldown = 4;
+
+    public override void Attack()
+    {
+        if (mobFocus == null)
+            return;
+        if (!selectedSkill.isCooldown) {
+            selectedSkill.cooldownTimer = skillCooldown;
+            selectedSkill.isCooldown = true;
+            
+            FaceLookAtEnemy();
+            Transform spawnedSkill = SkillManager.instance.SpawnSkillById(skills[0].id);
+            spawnedSkill.GetComponent<Weapon>().direction = this.faceSide;
+            spawnedSkill.GetComponent<Weapon>().owner = gameObject;
+            spawnedSkill.GetComponent<Weapon>().target = mobFocus.gameObject;
+            spawnedSkill.position = transform.position;
+            spawnedSkill.gameObject.SetActive(true);
+        }
+    }
+    public float cooldownTimer;
+    public void UpdateSkillCooldown() {
+        if (selectedSkill.isCooldown) {
+            selectedSkill.cooldownTimer -= Time.deltaTime;
+            cooldownTimer = selectedSkill.cooldownTimer;
+            if (selectedSkill.cooldownTimer <= 0)
+                selectedSkill.isCooldown = false;
+        }
     }
 
     private void FixedUpdate() {
@@ -31,6 +62,12 @@ public class Pet : Character
 
     private void LateUpdate() {
         MovingAroundCharacterHead();
+    }
+
+    protected virtual void AutoAttack() {
+        if (mobFocus != null) {
+
+        }
     }
 
     public void LookAtOwner() {
@@ -79,5 +116,11 @@ public class Pet : Character
             targetPos = petPos;
         }
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime);
+    }
+
+    public override void UpdateData(string[] data)
+    {
+        base.UpdateData(data);
+        selectedSkill = skills[0];
     }
 }
