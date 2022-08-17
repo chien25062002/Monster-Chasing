@@ -50,6 +50,7 @@ public class MapLoader : MyMonoBehaviour
                 characterPos = new Vector3(0, 0, 0);
             }
         }
+        Pet.instance.transform.position = characterPos;
         PlayerController.instance.character.transform.position = characterPos;
         GameScreen.instance.SetPanel(GameScreen.GAME_PANEL);
     }
@@ -62,8 +63,18 @@ public class MapLoader : MyMonoBehaviour
             if (mobPosition.mapIndex == mapIndex) {
                 Transform spawnedMob = MobManager.instance.SpawnMobByName(mobPosition.mobName);
                 spawnedMob.position = new Vector3(mobPosition.x, mobPosition.y, mobPosition.z);
-                spawnedMob.GetComponent<Mob>().spawnPosition = spawnedMob.position;
-                spawnedMob.GetComponent<Mob>().RandomSkill();
+                Mob mob = spawnedMob.GetComponent<Mob>();
+                mob.spawnPosition = spawnedMob.position;
+                if (mob.isBoss) {
+                    Boss boss = (Boss) mob;
+                    GameObject healthBar = Instantiate(Resources.Load("Prefabs/BossHealthBar") as GameObject);
+                    healthBar.transform.GetComponent<BossHealthBar>().SetMaxHealth(mob.GetHealthPointHolder());
+                    healthBar.transform.GetComponent<BossHealthBar>().owner = spawnedMob;
+                    healthBar.transform.SetParent(MapScreen.instance.transform, false);
+                    boss.bossHealthBar = healthBar.transform.GetComponent<BossHealthBar>();
+                    
+                }
+                mob.RandomSkill();
                 spawnedMob.gameObject.SetActive(true);
                 loadedMap.spawnedMobs.Add(spawnedMob);
             }

@@ -7,6 +7,7 @@ public class Skill
 {
     public const int KIEMKHI_TYPE = 1;
     public const int AMKHI_TYPE = 2;
+    public const int CHUONG_TYPE = 3;
 
     public int id;
     public int skillTemplateId;
@@ -23,6 +24,7 @@ public class Skill
     public float cooldownTimer;
     public bool isCooldown;
     public string imageName;
+    public SkillTemplate skillTemplate;
 
     public Skill() {
  
@@ -43,6 +45,7 @@ public class Skill
         cloneSkill.effectName = effectName;
         cloneSkill.referenceObjectName = referenceObjectName;
         cloneSkill.imageName = imageName;
+        cloneSkill.skillTemplate = skillTemplate;
         return cloneSkill;
     }
 

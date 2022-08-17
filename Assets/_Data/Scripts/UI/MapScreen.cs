@@ -8,6 +8,7 @@ public class MapScreen : MyMonoBehaviour
 
     public Map currentMap;
     public List<WaypointUI> waypoints = new List<WaypointUI>();
+    public MyImage focusImage;
 
     protected override void Awake()
     {
@@ -16,7 +17,18 @@ public class MapScreen : MyMonoBehaviour
             Debug.Log("Only 1 MapScreen instance is allowed to be created");
         instance = this;
         DontDestroyOnLoad(gameObject);
+        focusImage = MyImage.CreateImage("FocusArrow");
     }
+/*
+    private void OnGUI() {
+        if (PlayerController.instance.character.mobFocus != null) {
+            Vector3 pos = PlayerController.instance.character.mobFocus.transform.position;
+            pos.y += 3.5f;
+            Vector3 position = Camera.main.WorldToScreenPoint(pos);
+            position.y = GameScreen.instance.height - position.y;
+            GUI.DrawTexture(new Rect(position.x - focusImage.width, position.y - focusImage.height, focusImage.width, focusImage.height), focusImage.texture);
+        }
+    } */
 
     public void AddWaypoint(WaypointUI waypointUI) {
         waypoints.Add(waypointUI);
@@ -56,12 +68,6 @@ public class MapScreen : MyMonoBehaviour
     }
 
     protected override void LoadComponents()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }

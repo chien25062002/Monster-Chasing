@@ -13,3 +13,10 @@
 12,2,Ám Khí,25,60000,5,2.3,280,5000,50,Explosion2,ShurikenSplash5,WhiteKunai
 13,2,Ám Khí,30,100000,6,2.1,300,5000,50,Explosion2,ShurikenSplash6,WhiteKunai
 14,2,Ám Khí,35,200000,7,1.9,350,5000,50,Explosion2,ShurikenSplash7,WhiteKunai
+15,3,Kamejoko,2,1000,1,3.8,500,10000,50,WaterExplosion,Kamejoko1,KamejokoIcon
+16,3,Kamejoko,3,1000,2,3.5,550,10000,50,WaterExplosion,Kamejoko2,KamejokoIcon
+17,3,Kamejoko,4,1000,3,3.2,600,10000,50,WaterExplosion,Kamejoko3,KamejokoIcon
+18,3,Kamejoko,5,1000,4,2.9,650,10000,50,WaterExplosion,Kamejoko4,KamejokoIcon
+19,3,Kamejoko,6,1000,5,2.6,700,10000,50,WaterExplosion,Kamejoko5,KamejokoIcon
+20,3,Kamejoko,7,1000,6,2.3,750,10000,50,WaterExplosion,Kamejoko6,KamejokoIcon
+21,3,Kamejoko,8,1000,7,2,800,10000,50,WaterExplosion,Kamejoko7,KamejokoIcon

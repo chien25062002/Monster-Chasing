@@ -12,18 +12,49 @@ public class FlyText : MyMonoBehaviour
     public const int COLOR_WHITE = 3;
     public const int COLOR_YELLOW = 4;
 
+    public Transform focusObject;
+
     public Text textUI;
+
+    public float flyTime;
+    private float flyTimer;
+    private float lastYPos;
 
     protected override void Awake()
     {
         textUI = GetComponent<Text>();
+        flyTime = 1.5f;
     }
 
     public void SetText(string text, int x, int y) {
 
     }
 
-    public void mFont_Roboto(string text, float x, float y, float color) {
+    private void Update() {
+        if (focusObject == null)
+            return;
+        Vector3 tempPos = focusObject.position;
+        tempPos.y = lastYPos;
+        tempPos.x += 2.5f;
+        transform.position = tempPos;
+
+        Fly();
+        UpdateFlyTime();
+    }
+
+    public void Fly() {
+        Vector3 tempPos = transform.position;
+        tempPos.y += Time.deltaTime * 1.5f;
+        lastYPos = tempPos.y;
+        transform.position = tempPos;
+    }
+
+    public void UpdateFlyTime() {
+        flyTimer += Time.deltaTime;
+        if (flyTimer >= flyTime)
+            Destroy(gameObject);
+    }
+    public void mFont_Roboto(string text, float color, Transform focusObject) {
         Font font = Resources.Load<Font>(FONT_PATH + "Roboto/" + "Roboto-Bold");
         textUI.text = text;
         textUI.font = font;
@@ -38,8 +69,7 @@ public class FlyText : MyMonoBehaviour
                 textUI.color = Color.yellow;
                 break;
         }
-        Vector3 screenPoint = mSystem.WorldToScreenPoint(new Vector3(x, y, 0));
-        Vector2 anchoredPosition = transform.InverseTransformPoint(screenPoint);
-        transform.position = anchoredPosition;
+        lastYPos = focusObject.position.y + 3.5f;
+        this.focusObject = focusObject;
     }
 }

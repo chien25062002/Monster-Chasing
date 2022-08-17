@@ -8,6 +8,8 @@ TagManager:
   - Mob
   - Ground
   - Pet
+  - GoldCoin
+  - Diamond
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - UI
   - Character
   - Obstacle
-  - 
-  - 
-  - 
+  - Coin
+  - Ground
+  - Mob
   - 
   - 
   - 

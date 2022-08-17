@@ -16,18 +16,18 @@ public class HealthPointUI : MyMonoBehaviour
     {
         hpFillBar = transform.Find("HealthPointBar/HpFillBar").GetComponent<Image>();
         mpFillBar = transform.Find("HealthPointBar/MpFillBar").GetComponent<Image>();
-        character = PlayerController.instance.character;
     }
 
     // Update is called once per frame
     void Update()
     {
+        character = PlayerController.instance.character;
         hp = character.GetHealthPoint();
         hpHolder = character.GetHealthPointHolder();
         mp = character.GetManaPoint();
         mpHolder = character.GetManaPointHolder();
-        hpPercent = ((float) character.GetHealthPoint()) / character.GetHealthPointHolder();
-        mpPercent = ((float) character.GetManaPoint()) / character.GetManaPointHolder();
+        hpPercent = ((float) hp) / hpHolder;
+        mpPercent = ((float) mp) / mpHolder;
 
         hpFillBar.fillAmount = hpPercent;
         mpFillBar.fillAmount = mpPercent;

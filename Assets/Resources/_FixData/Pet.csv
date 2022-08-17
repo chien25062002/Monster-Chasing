@@ -1,2 +1,2 @@
-﻿HealthPoint,ManaPoint,Damage,Defense,Critical,SkillId,PosX,PosY,PosZ,Power,Map
-200,200,50,0,0,8,0,0,0,200000,1
+﻿HealthPoint,ManaPoint,Damage,Defense,Critical,SkillId,PosX,PosY,PosZ,Power,Potential,Gold Coin,Diamon,Map
+2000,2000,50,0,0,21,0,0,0,2000,2000,2000,0,1

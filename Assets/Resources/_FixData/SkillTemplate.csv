@@ -1,3 +1,4 @@
 ﻿Id,Name,Max Level,Type,Icon Path,Description,Mana Use Type
 1,Kiếm Khí,7,1,Assets\_Data\Sprites\GUI\Game Screen\Skill\Sword\Skill1Icon,Kỹ năng cận chiến có thể tiêu diệt chớp nhoáng kẻ thù ở khoảng cách gần,0
 2,Ám Khí,7,2,Assets\_Data\Sprites\GUI\Game Screen\Skill\Shuriken\Skill2Icon,Kỹ năng đánh xa với sức công phá lớn khiến kẻ thù thở oxy,1
+3,Chưởng,7,3,Assets\_Data\Sprites\GUI\Game Screen\Skill\Kamejoko\KamejokoIcon,Kỹ năng đánh xa với uy lực cực mạnh,1

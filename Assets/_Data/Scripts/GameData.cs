@@ -28,4 +28,12 @@ public class GameData
             if (waypoint.currentMapId == id) return waypoint;
         return null;
     }
+
+    public SkillTemplate GetSkillTemplateById(int id) {
+        foreach (SkillTemplate skillTemplate in skillTemplates) {
+            if (skillTemplate.id == id)
+                return skillTemplate;
+        }
+        return null;
+    }
 }

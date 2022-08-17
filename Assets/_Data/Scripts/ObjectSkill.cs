@@ -22,6 +22,7 @@ public class ObjectSkill : MonoBehaviour
     public bool isCooldown;
     public Transform effect;
     public string imageName;
+    public SkillTemplate skillTemplate;
 
     public void SetData(Skill skill) {
         this.skillName = skill.skillName;
@@ -37,6 +38,7 @@ public class ObjectSkill : MonoBehaviour
         this.effectName = skill.effectName;
         this.referenceObjectName = skill.referenceObjectName;
         this.imageName = skill.imageName;
+        skillTemplate = skill.skillTemplate;
 
         effect = EffectMn.instance.GetEffectByName(effectName);
     }

@@ -1,11 +1,11 @@
 ﻿MapName,MapIndex,MobName,PosX,PosY,PosZ
-Bờ biển hoang vu,2,Orc,20,-3,0
+Bờ biển hoang vu,2,Dragon,20,-3,0
 Bờ biển hoang vu,2,Orc,40,-3,0
 Bờ biển hoang vu,2,Orc,65,-3,0
 Bờ biển hoang vu,2,Big Orc,95,-2,0
 Cửa biển,3,Big Orc,-3.3,-0.5,0
 Cửa biển,3,Orc,17.53,-4.47,0
 Cửa biển,3,Big Orc,35.76,7.5,0
-Cửa biển,3,Orc,50.23,1.5,0
-Cửa biển,3,Big Orc,63.29,1.5,0
-Cửa biển,3,Orc,-30,-4.5,0
+Cửa biển,3,Orc,55,1.5,0
+Cửa biển,3,Dragon,85,1.5,0
+Cửa biển,3,Big Orc,-30,-4.5,0

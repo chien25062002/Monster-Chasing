@@ -292,7 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c8f5d2f0b46e24bbb896c7b7956ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Orc
+  objectName: 
+  healthPointHolder: 0
+  manaPointHolder: 0
   currentState: 0
   healthPoint: 200
   manaPoint: 200
@@ -300,17 +302,28 @@ MonoBehaviour:
   def: 0
   crit: 0
   speed: 5
-  mapIndex: 0
+  isDeath: 0
+  currentMapId: 0
+  lastMapIndex: 0
   power: 0
+  potential: 0
+  isAlive: 1
   faceSide: 1
+  isStanding: 0
   x: 0
   y: 0
   position: {x: 0, y: 0, z: 0}
+  spawnPosition: {x: 0, y: 0, z: 0}
   isGrounded: 0
+  isVulnerable: 0
+  makeHurtObject: {fileID: 0}
   timer: 0
   sr: {fileID: 4896293689933484951}
   anim: {fileID: 4896293689933484944}
   id: 0
+  isBoss: 0
+  isAttacking: 0
+  reSpawnTimer: 0
   isStand: 1
   isMoving: 0
   movingTimer: 0
@@ -321,6 +334,8 @@ MonoBehaviour:
   rightBounds: {x: 0, y: 0, z: 0}
   topBounds: {x: 0, y: 0, z: 0}
   bottomBounds: {x: 0, y: 0, z: 0}
+  focusedObject: {fileID: 0}
+  cooldownTimer: 0
 --- !u!114 &4383995594396110015
 MonoBehaviour:
   m_ObjectHideFlags: 0

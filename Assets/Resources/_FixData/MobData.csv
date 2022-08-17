@@ -1,3 +1,4 @@
-﻿Name,HealthPoint,ManaPoint,Damage,Defense,Critical,Speed
-Orc,200,200,10,1,0,3
-Big Orc,500,500,25,2,0,4
+﻿Name,HealthPoint,ManaPoint,Damage,Defense,Critical,Speed,Is Boss
+Orc,200,200,10,1,0,3,0
+Big Orc,500,500,25,2,0,4,0
+Dragon,5000,5000,100,5,0,7,1

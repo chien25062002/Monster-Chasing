@@ -14,6 +14,14 @@ public class Character : MapObject, IMapObject
     public float moveX;
     public float moveY;
     public bool goHome;
+    protected int goldCoin;
+    protected int diamond;
+    Pet pet;
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 
     protected virtual void Update() {
         SearchFocus();
@@ -100,8 +108,8 @@ public class Character : MapObject, IMapObject
         if (mobFocus == null)
             return;
         FaceLookAtEnemy();
+        UseSkill();
         if (!selectedSkill.isCooldown) {
-            selectedSkill.cooldownTimer = selectedSkill.cooldown;
             selectedSkill.isCooldown = true;
             isAttacking = true;
             switch (selectedSkill.skillTemplateId) {
@@ -116,14 +124,20 @@ public class Character : MapObject, IMapObject
         }
     }
 
+    public void SetSkill(string skillName) {
+        Skill skill = GetSkillByName(skillName);
+        selectedSkill = skill;
+    }
+
     public void Attack(string skillName) {
         if (mobFocus == null)
             return;
         FaceLookAtEnemy();
         Skill skill = GetSkillByName(skillName);
         selectedSkill = skill;
+        
+        UseSkill();
         if (!selectedSkill.isCooldown) {
-            selectedSkill.cooldownTimer = selectedSkill.cooldown;
             selectedSkill.isCooldown = true;
             isAttacking = true;
             switch (skill.skillTemplateId) {
@@ -133,8 +147,43 @@ public class Character : MapObject, IMapObject
                 case Skill.AMKHI_TYPE:
                     currentState = THROW_STATE;
                     break;
+                case Skill.CHUONG_TYPE:
+                    currentState = THROW_STATE;
+                    break;
             }
             anim.SetInteger(Character.PLAYER_STATE, currentState);
+        }
+    }
+
+    protected float Percent(float percent) {
+        return percent / 100;
+    }
+
+    public virtual bool CanAttack() {
+        if (selectedSkill == null)
+            return false;
+
+        if (selectedSkill.skillTemplate.manaUseType == 0) {
+            if (manaPoint - selectedSkill.manaUse >= 0)
+                return true;
+            return false;
+        }
+        if (selectedSkill.skillTemplate.manaUseType == 1) {
+            if (manaPoint - (int) ((Percent(selectedSkill.manaUse) * manaPointHolder)) >= 0)
+                return true;
+            return false;
+        }
+        return false;
+    }
+
+    public void UseSkill() {
+        if (selectedSkill == null)
+            return;
+        if (selectedSkill.skillTemplate.manaUseType == 0) {
+            manaPoint -= (int) (selectedSkill.manaUse);
+        }
+        if (selectedSkill.skillTemplate.manaUseType == 1) {
+            manaPoint -= (int) (Percent(selectedSkill.manaUse) * manaPointHolder);
         }
     }
 
@@ -217,6 +266,53 @@ public class Character : MapObject, IMapObject
         set { currentState = value; }
     }
 
+    public int GoldCoin {
+        get { return goldCoin; }
+    }
+
+    public int Diamond {
+        get { return diamond; }
+    }
+
+    public int Potential {
+        get { return potential; }
+    }
+
+    public int Power {
+        get { return power; }
+    }
+
+    public virtual void ReceivePotential(int receivedPotential) {
+        if (receivedPotential <= 0)
+            return;
+        this.power += receivedPotential;
+        this.potential += receivedPotential;
+    }
+
+    public void ReceiveGoldCoin(int goldValue) {
+        if (goldValue <= 0)
+            return;
+        goldCoin += goldValue;
+    }
+
+    public int GetPropertyByName(string propertyName) {
+        if (propertyName == "HealthPoint")
+            return healthPointHolder;
+        if (propertyName == "ManaPoint")
+            return manaPointHolder;
+        if (propertyName == "Damage")
+            return damage;
+        if (propertyName == "Crit")
+            return crit;
+        return -1;
+    }
+
+    public virtual void UseAmericaGrass() {
+        this.healthPoint = healthPointHolder;
+        this.manaPoint = manaPointHolder;
+        Pet.instance.UseAmericaGrass();
+    }
+
     public virtual void UpdateData(string[] data) {
         healthPointHolder = int.Parse(data[0]);
         healthPoint = healthPointHolder;
@@ -230,6 +326,9 @@ public class Character : MapObject, IMapObject
             this.skills.Add(GameData.GetInstance().GetSkillById(int.Parse(sSkillId[i])).Clone());
         transform.position = new Vector3(float.Parse(data[6]), float.Parse(data[7]), float.Parse(data[8]));
         power = int.Parse(data[9]);
-        currentMapId = int.Parse(data[10]);
+        potential = int.Parse(data[10]);
+        goldCoin = int.Parse(data[11]);
+        diamond = int.Parse(data[12]);
+        currentMapId = int.Parse(data[13]);
     }
 }

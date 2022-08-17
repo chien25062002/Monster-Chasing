@@ -24,5 +24,7 @@ public class InventoryButton : MyMonoBehaviour
 
     protected virtual void AddButtonEvent() {
         skillButton.onClick.AddListener(delegate {MenuPanel.instance.ChangeInventory(MenuPanel.SKILL_INVENTORY);});
+        potentialityButton.onClick.AddListener(delegate {MenuPanel.instance.ChangeInventory(MenuPanel.POTENTIALITY_INVENTORY);});
+        menuButton.onClick.AddListener(delegate {MenuPanel.instance.ChangeInventory(MenuPanel.MENU_INVENTORY);});
     }
 }

@@ -12,6 +12,7 @@ public class GameScreen : MyMonoBehaviour
     public const int START_GAME_PANEL = 3;
     public const int LOADING_GAME_SCREEN_PANEL = 4;
     public const int DEATH_PANEL = 5;
+    public const int PET_PANEL = 6;
 
     public List<Transform> visibleMobs = new List<Transform>();
 
@@ -19,6 +20,7 @@ public class GameScreen : MyMonoBehaviour
     public Panel currentPanel;
     public GamePanel gamePanel;
     public MenuPanel menuPanel;
+    public PetPanel petPanel;
     public StartGamePanel startGamePanel;
     public LoadingScreenPanel loadingScreenPanel;
     public DeathPanel deathPanel;
@@ -60,6 +62,7 @@ public class GameScreen : MyMonoBehaviour
         gameCanvas = gameObject.transform.parent.transform;
         gamePanel = this.transform.Find("GamePanel").GetComponent<GamePanel>();
         menuPanel = this.transform.Find("MenuPanel").GetComponent<MenuPanel>();
+        petPanel = this.transform.Find("PetPanel").GetComponent<PetPanel>();
         startGamePanel = this.transform.Find("StartGamePanel").GetComponent<StartGamePanel>();
         loadingScreenPanel = this.transform.Find("LoadingScreenPanel").GetComponent<LoadingScreenPanel>();
         deathPanel = this.transform.Find("DeathPanel").GetComponent<DeathPanel>();
@@ -95,6 +98,9 @@ public class GameScreen : MyMonoBehaviour
                 break;
             case DEATH_PANEL:
                 currentPanel = deathPanel;
+                break;
+            case PET_PANEL:
+                currentPanel = petPanel;
                 break;
         }
         Show();

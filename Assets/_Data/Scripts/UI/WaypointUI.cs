@@ -40,7 +40,6 @@ public class WaypointUI : MonoBehaviour
         y = waypoint.y;
         z = waypoint.z;
         align = waypoint.align;
-        Debug.Log("waypoint.y = " + waypoint.charY);
         charPos = new Vector3(waypoint.charX, waypoint.charY, waypoint.charZ);
 
         transform.GetComponentInChildren<Text>().text = nextMapName;

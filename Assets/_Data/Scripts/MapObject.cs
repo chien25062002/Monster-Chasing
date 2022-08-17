@@ -26,6 +26,7 @@ public class MapObject : MyMonoBehaviour, IMapObject
     public int currentMapId;
     public int lastMapIndex;
     [SerializeField] protected int power;
+    [SerializeField] protected int potential;
     public bool isAlive = true;
     public float faceSide = 1f;
     public bool isStanding;

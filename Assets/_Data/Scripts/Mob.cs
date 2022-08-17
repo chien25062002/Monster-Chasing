@@ -14,6 +14,9 @@ public class Mob : MapObject
     protected float movingTime = 4f;
     protected float reSpawnTime = 4f;
     protected float skillCooldown = 10;
+    private bool spawnCoin;
+    public bool isBoss;
+    public bool isAttacking;
     [SerializeField] protected float reSpawnTimer = 0f;
     [SerializeField] protected bool isStand = true;
     [SerializeField] protected bool isMoving = false;
@@ -62,6 +65,8 @@ public class Mob : MapObject
         Vulnerability();
         UpdateSkillCooldown();
 
+        if (isAttacking)
+            return;
         if (isStand) {
             standTimer += Time.deltaTime;
             Stand();
@@ -121,8 +126,12 @@ public class Mob : MapObject
         anim.SetInteger(MOB_STATE, currentState);
     }
 
-    public void Death() {
+    public virtual void Death() {
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        if (!spawnCoin) {
+            DropGoldCoin(100, 5000);
+        }
+        spawnCoin = true;
     }
 
     public override void ReSpawn()
@@ -132,6 +141,7 @@ public class Mob : MapObject
         isAlive = true;
         isVulnerable = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        spawnCoin = false;
     }
 
     public void Vulnerability() {
@@ -154,6 +164,9 @@ public class Mob : MapObject
             selectedSkill.isCooldown = true;
             
             FaceLookAtEnemy();
+            isAttacking = true;
+            currentState = ATTACK_STATE;
+            UpdateAnimation();
             Transform spawnedSkill = SkillManager.instance.SpawnSkillById(skills[0].id);
             spawnedSkill.GetComponent<Weapon>().direction = this.faceSide;
             spawnedSkill.GetComponent<Weapon>().owner = gameObject;
@@ -162,6 +175,11 @@ public class Mob : MapObject
             spawnedSkill.gameObject.SetActive(true);
         }
     }
+
+    public void AttackFinish() {
+        isAttacking = false;
+    }
+
     public float cooldownTimer;
     public void UpdateSkillCooldown() {
         if (selectedSkill.isCooldown) {
@@ -217,6 +235,33 @@ public class Mob : MapObject
         return false;
     }
 
+    public void DropGoldCoin(int minCoin, int maxCoin) {
+        int goldValue = Random.Range(minCoin, maxCoin + 1);
+        if (goldValue < (maxCoin * 1.0 / 3)) {
+            GameObject coin = Instantiate(Resources.Load("Prefabs/GoldCoin") as GameObject);
+            coin.GetComponent<GoldCoin>().goldValue = goldValue;
+            coin.transform.position = transform.position;
+        } else if (goldValue >= (maxCoin * 1.0 / 3) && goldValue < (maxCoin * 2.0 / 3)) {
+            Vector3 pos = transform.position;
+            pos.x -= 1;
+            for (int i = 1; i <= 2; i++) {
+                GameObject coin = Instantiate(Resources.Load("Prefabs/GoldCoin") as GameObject);
+                coin.GetComponent<GoldCoin>().goldValue = goldValue / 2;
+                coin.transform.position = pos;
+                pos.x += 1;
+            }
+        } else if (goldValue > (maxCoin * 2.0 / 3)) {
+             Vector3 pos = transform.position;
+                pos.x -= 1;
+                for (int i = 1; i <= 3; i++) {
+                    GameObject coin = Instantiate(Resources.Load("Prefabs/GoldCoin") as GameObject);
+                    coin.GetComponent<GoldCoin>().goldValue = goldValue / 3;
+                    coin.transform.position = pos;
+                    pos.x += 1;
+                }
+        }
+    }
+
     public void SetData(MobData mobData) {
         objectName = mobData.name;
         healthPointHolder = mobData.healthPoint;
@@ -227,6 +272,7 @@ public class Mob : MapObject
         def = mobData.def;
         crit = mobData.crit;
         speed = mobData.speed;
+        isBoss = mobData.isBoss;
         isAlive = true;
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GamePanel : Panel
 {
+    public static GamePanel instance;
     [SerializeField] protected Button menuButton;
     [SerializeField] protected Button attackButton;
     [SerializeField] protected Button changeFocusButton;
@@ -16,9 +17,18 @@ public class GamePanel : Panel
     [SerializeField] protected Button skill4;
     [SerializeField] protected Button skill5;
     [SerializeField] protected Button currentSkill;
+    [SerializeField] protected Button healButton;
     private int centerX, centerY;
 
-    public MyImage focusImage;
+    [SerializeField] protected Image focusArrow;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        if (instance != null)
+            Debug.Log("Only 1 GamePanel instance is allowed to be created!");
+        instance = this;
+    }
 
     protected override void LoadComponents()
     {
@@ -26,9 +36,8 @@ public class GamePanel : Panel
         fixedJoystick = FindObjectOfType<FixedJoystick>();
         this.LoadSkillBar();
         this.LoadButton();
-        focusImage = MyImage.CreateImage("FocusArrow");
-        GUILayout.Width(1920);
-        GUILayout.Height(1080);
+        
+        focusArrow = transform.Find("FocusArrow").GetComponent<Image>();
     }
 
     protected virtual void LoadButton() {
@@ -39,6 +48,9 @@ public class GamePanel : Panel
 
         changeFocusButton = this.transform.Find("ChangeFocus").Find("ChangeFocusButton").GetComponent<Button>();
         changeFocusButton.onClick.AddListener(delegate {PlayerController.instance.character.ChangeFocus();});
+
+        healButton = transform.Find("HpPotion/HpPotionButton").GetComponent<Button>();
+        healButton.onClick.AddListener(delegate {PlayerController.instance.character.UseAmericaGrass();});
     }
 
     protected virtual void LoadSkillBar() {
@@ -51,8 +63,10 @@ public class GamePanel : Panel
 
         skill1.GetComponent<ObjectSkill>().SetData(PlayerController.instance.character.skills[0]);
         skill2.GetComponent<ObjectSkill>().SetData(PlayerController.instance.character.skills[1]);
+        skill3.GetComponent<ObjectSkill>().SetData(PlayerController.instance.character.skills[2]);
         skill1.onClick.AddListener(delegate {SkillClicked(skill1);});
         skill2.onClick.AddListener(delegate {SkillClicked(skill2);});
+        skill3.onClick.AddListener(delegate {SkillClicked(skill3);});
 
         currentSkill = skill1;
     }
@@ -64,6 +78,19 @@ public class GamePanel : Panel
         float moveVertical = fixedJoystick.Vertical;
         PlayerController.instance.playerMovement.moveX = moveHorizontal;
         PlayerController.instance.playerMovement.moveY = moveVertical;
+
+        UpdateFocus();
+    }
+
+    public void UpdateFocus() {
+        if (PlayerController.instance.character.mobFocus != null) {
+            focusArrow.enabled = true;
+            Vector3 pos = PlayerController.instance.character.mobFocus.transform.position;
+            pos.y += 3.5f;
+            focusArrow.transform.position = pos;
+        } else {
+            focusArrow.enabled = false;
+        }
     }
 
     public void UpdateCharacter() {
@@ -72,6 +99,9 @@ public class GamePanel : Panel
 
     public void SkillClicked(Button skill) {
         if (PlayerController.instance.character.mobFocus == null)
+            return;
+        PlayerController.instance.character.SetSkill(skill.GetComponent<ObjectSkill>().skillName);
+        if (!PlayerController.instance.character.CanAttack())
             return;
         if (!skill.GetComponent<ObjectSkill>().isCooldown) {
             currentSkill = skill;
@@ -97,13 +127,31 @@ public class GamePanel : Panel
         }
     }
 
-    private void OnGUI() {
-        if (PlayerController.instance.character.mobFocus != null) {
-            Vector3 pos = PlayerController.instance.character.mobFocus.transform.position;
-            pos.y += 3.5f;
-            Vector3 position = Camera.main.WorldToScreenPoint(pos);
-            position.y = GameScreen.instance.height - position.y;
-            GUI.DrawTexture(new Rect(position.x - focusImage.width, position.y - focusImage.height, focusImage.width, focusImage.height), focusImage.texture);
+    public virtual void DrawMessageDialog(string text, int color,Transform focusObject) {
+        GameObject messageDialog = Instantiate(Resources.Load("Prefabs/MessageDialog") as GameObject);
+        messageDialog.transform.SetParent(GameScreen.instance.gamePanel.transform, false);
+        messageDialog.GetComponent<MessageDialog>().mFont_Roboto(text, color, focusObject);
+    }
+
+    public virtual void DrawDamge(string damage, Transform focusObject) {
+        GameObject flyText = Instantiate(Resources.Load("Prefabs/FlyText") as GameObject);
+        flyText.transform.SetParent(GameScreen.instance.gamePanel.transform, true);
+        flyText.GetComponent<FlyText>().mFont_Roboto("-" + damage, FlyText.COLOR_RED, focusObject);
+    }
+
+    public virtual void DrawReceivedPotential(int potentialReceive, Transform focusObject) {
+        if (focusObject.CompareTag("Pet") || focusObject.CompareTag("Player")) {
+            GameObject flyText = Instantiate(Resources.Load("Prefabs/FlyText") as GameObject);
+            flyText.transform.SetParent(GameScreen.instance.gamePanel.transform, true);
+            flyText.GetComponent<FlyText>().mFont_Roboto("+" + potentialReceive, FlyText.COLOR_GREEN, PlayerController.instance.character.transform);
+        }
+    }
+
+    public virtual void DrawReceivedGoldCoin(int goldCoin, Transform focusObject) {
+        if (focusObject.CompareTag("Pet") || focusObject.CompareTag("Player")) {
+            GameObject flyText = Instantiate(Resources.Load("Prefabs/FlyText") as GameObject);
+            flyText.transform.SetParent(GameScreen.instance.gamePanel.transform, true);
+            flyText.GetComponent<FlyText>().mFont_Roboto("+" + goldCoin, FlyText.COLOR_YELLOW, PlayerController.instance.character.transform);
         }
     }
 }

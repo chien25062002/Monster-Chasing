@@ -10,6 +10,7 @@ public class Pet : Character
     public bool standFly;
     public float standFlyTime = 4;
     public float standFlyTimer;
+    public bool hasDrawDialog;
 
     protected override void Awake()
     {
@@ -19,24 +20,52 @@ public class Pet : Character
         DontDestroyOnLoad(gameObject);
         isMoving = false;
         isMovingToRight = true;
+        hasDrawDialog = false;
     }
 
     protected override void Update() {
         base.Update();
         Attack();
         UpdateSkillCooldown();
+        AutoIncreasePotential();
     }
 
-    private float skillCooldown = 4;
+    public override bool CanAttack()
+    {
+        if (base.CanAttack()) {
+            return true;
+        } else {
+            if (!hasDrawDialog) {
+                hasDrawDialog = true;
+                string message = "Sư phụ ơi con hết mana rồi.";
+                GamePanel.instance.DrawMessageDialog(message, MessageDialog.COLOR_BLACK, transform);
+            }
+            return false;
+        }
+    }
+
+    public override void UseAmericaGrass()
+    {
+        this.healthPoint = healthPointHolder;
+        this.manaPoint = manaPointHolder;
+        if (!hasDrawDialog) {
+                hasDrawDialog = true;
+                string message = "Cảm ơn sư phụ.";
+                GamePanel.instance.DrawMessageDialog(message, MessageDialog.COLOR_BLACK, transform);
+        }
+    }
 
     public override void Attack()
     {
         if (mobFocus == null)
             return;
+        if (!CanAttack())
+            return;
         if (!selectedSkill.isCooldown) {
-            selectedSkill.cooldownTimer = skillCooldown;
+            selectedSkill.cooldownTimer = selectedSkill.cooldown;
             selectedSkill.isCooldown = true;
             
+            UseSkill();
             FaceLookAtEnemy();
             Transform spawnedSkill = SkillManager.instance.SpawnSkillById(skills[0].id);
             spawnedSkill.GetComponent<Weapon>().direction = this.faceSide;
@@ -46,11 +75,10 @@ public class Pet : Character
             spawnedSkill.gameObject.SetActive(true);
         }
     }
-    public float cooldownTimer;
+
     public void UpdateSkillCooldown() {
         if (selectedSkill.isCooldown) {
             selectedSkill.cooldownTimer -= Time.deltaTime;
-            cooldownTimer = selectedSkill.cooldownTimer;
             if (selectedSkill.cooldownTimer <= 0)
                 selectedSkill.isCooldown = false;
         }
@@ -116,6 +144,46 @@ public class Pet : Character
             targetPos = petPos;
         }
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime);
+    }
+
+    protected virtual void DecreasePotential(int potential) {
+        this.potential -= potential;
+    }
+
+    public override void ReceivePotential(int receivedPotential)
+    {
+        if (receivedPotential <= 0)
+            return;
+        this.power += (int) (receivedPotential * Percent(150));
+        this.potential += (int) (receivedPotential * Percent(150));
+    }
+
+    protected virtual void AutoIncreasePotential() {
+        int damgePotential = damage * 10;
+        int hpPotential = (int) (healthPointHolder * Percent(100));
+        int mpPotential = (int) (manaPointHolder * Percent(100));
+        int critPotential = GetCrit() * 1000;
+
+        if (potential >= hpPotential && potential - hpPotential >= 0) {
+            healthPointHolder += 20;
+            DecreasePotential(hpPotential);
+            return;
+        }
+        if (potential >= mpPotential && potential - manaPointHolder >= 0) {
+            manaPointHolder += 20;
+            DecreasePotential(mpPotential);
+            return;
+        }
+        if (potential >= damgePotential && potential - damgePotential >= 0) {
+            damage++;
+            DecreasePotential(damgePotential);
+            return;
+        }
+        if (potential >= critPotential && potential - critPotential >= 0) {
+            crit += 1;
+            DecreasePotential(mpPotential);
+            return;
+        }
     }
 
     public override void UpdateData(string[] data)

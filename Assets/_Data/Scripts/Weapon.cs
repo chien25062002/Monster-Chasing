@@ -13,16 +13,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected AIDestinationSetter destination;
 
     private void Awake() {
-        destination = GetComponent<AIDestinationSetter>();
+        destination = gameObject.GetComponent<AIDestinationSetter>();
         destination.target = target.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        liveTime -= Time.deltaTime;
-        if (liveTime <= 0)
+        if (target == null)
             Destroy(gameObject);
+        liveTime -= Time.deltaTime;
+        // if (liveTime <= 0)
+        //     Destroy(gameObject);
     }
 
     public void FlipX() {

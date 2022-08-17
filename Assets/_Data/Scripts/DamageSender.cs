@@ -15,13 +15,19 @@ public class DamageSender : MonoBehaviour
         } else {
             damage = (int) (owner.GetComponent<Mob>().GetDamage() * damagePercent);
         }
-        DrawDamge(damage.ToString(), other.transform.position.x, other.transform.position.y - 10);
+        GamePanel.instance.DrawDamge(damage.ToString(), other.transform);
+        if (owner.CompareTag("Player") || owner.CompareTag("Pet")) {
+            int ReceivePotential = caculateReceivedPotential(damage);
+            PlayerController.instance.character.ReceivePotential(ReceivePotential);
+            if (owner.CompareTag("Pet")) {
+                Pet.instance.ReceivePotential(ReceivePotential);
+            }
+            GamePanel.instance.DrawReceivedPotential(ReceivePotential, owner.transform);
+        }
         other.GetComponent<DamageReceiver>().GetDamage(damage, owner.transform);
     }
 
-    protected virtual void DrawDamge(string damage, float x, float y) {
-        GameObject flyText = Instantiate(Resources.Load("Prefabs/FlyText") as GameObject);
-        flyText.transform.SetParent(GameScreen.instance.gamePanel.transform, true);
-        flyText.GetComponent<FlyText>().mFont_Roboto(damage, x, y, FlyText.COLOR_RED);
+    private int caculateReceivedPotential(int damage) {
+        return damage * 2;
     }
 }

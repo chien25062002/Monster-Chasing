@@ -49,6 +49,7 @@ public class SkillManager : MyMonoBehaviour
         foreach (Transform skill in skills) {
             if (skill.GetComponent<ObjectSkill>().id == id) {
                 spawnedObject = Instantiate(skill.gameObject);
+                spawnedObject.transform.localScale = skill.localScale;
                 spawnedSkill = spawnedObject.transform;
                 return spawnedSkill;
             }
