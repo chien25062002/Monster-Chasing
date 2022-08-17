@@ -50,7 +50,7 @@ public class GamePanel : Panel
         changeFocusButton.onClick.AddListener(delegate {PlayerController.instance.character.ChangeFocus();});
 
         healButton = transform.Find("HpPotion/HpPotionButton").GetComponent<Button>();
-        healButton.onClick.AddListener(delegate {PlayerController.instance.character.UseAmericaGrass();});
+        healButton.onClick.AddListener(delegate {PlayerController.instance.character.UsePotion();});
     }
 
     protected virtual void LoadSkillBar() {

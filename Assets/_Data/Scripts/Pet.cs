@@ -12,6 +12,12 @@ public class Pet : Character
     public float standFlyTimer;
     public bool hasDrawDialog;
 
+    public const int ATTACK_STATUS = 1;
+    public const int PROTECT_STATUS = 2;
+    public const int FOLLOW_STATUS = 3;
+    public const int GOHOME_STATUS = 4;
+    protected int petStatus;
+
     protected override void Awake()
     {
         if (instance != null)
@@ -21,11 +27,14 @@ public class Pet : Character
         isMoving = false;
         isMovingToRight = true;
         hasDrawDialog = false;
+        petStatus = ATTACK_STATUS;
     }
 
     protected override void Update() {
         base.Update();
-        Attack();
+        if (petStatus == ATTACK_STATUS) {
+            Attack();
+        }
         UpdateSkillCooldown();
         AutoIncreasePotential();
     }
@@ -44,7 +53,7 @@ public class Pet : Character
         }
     }
 
-    public override void UseAmericaGrass()
+    public override void UsePotion()
     {
         this.healthPoint = healthPointHolder;
         this.manaPoint = manaPointHolder;
@@ -96,6 +105,36 @@ public class Pet : Character
         if (mobFocus != null) {
 
         }
+    }
+
+    public virtual void SetStatus(int status) {
+        string petMessage = "";
+        switch (status) {
+            case FOLLOW_STATUS:
+                GoHome(false);
+                petStatus = FOLLOW_STATUS;
+                petMessage = "Ok con đi theo sư phụ.";
+                break;
+            case ATTACK_STATUS:
+                GoHome(false);
+                petStatus = ATTACK_STATUS;
+                petMessage = "Ok con sẽ tấn công phụ.";
+                break;
+            case GOHOME_STATUS:
+                petStatus = "Ok sư phụ con sẽ về nhà.";
+                GamePanel.instance.DrawMessageDialog(petMessage, MessageDialog.COLOR_BLACK, transform);
+                GoHome(true);
+                return;
+                break;
+        }
+        GamePanel.instance.DrawMessageDialog(petMessage, MessageDialog.COLOR_BLACK, transform);
+    }
+
+    private void GoHome(bool goHome) {
+        if (goHome)
+            transform.GetComponent<SpriteRenderer>().enabled = false;
+        else
+            transform.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     public void LookAtOwner() {

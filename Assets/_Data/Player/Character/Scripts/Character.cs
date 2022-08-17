@@ -307,10 +307,10 @@ public class Character : MapObject, IMapObject
         return -1;
     }
 
-    public virtual void UseAmericaGrass() {
+    public virtual void UsePotion() {
         this.healthPoint = healthPointHolder;
         this.manaPoint = manaPointHolder;
-        Pet.instance.UseAmericaGrass();
+        Pet.instance.UsePotion();
     }
 
     public virtual void UpdateData(string[] data) {

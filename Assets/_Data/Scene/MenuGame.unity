@@ -4460,6 +4460,7 @@ GameObject:
   - component: {fileID: 1105409344}
   - component: {fileID: 1105409347}
   - component: {fileID: 1105409346}
+  - component: {fileID: 1105409348}
   m_Layer: 5
   m_Name: PetStatusInventory
   m_TagString: Untagged
@@ -4526,6 +4527,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105409343}
   m_CullTransparentMesh: 1
+--- !u!114 &1105409348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105409343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 907af28186797db4aacf126e459c1252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followStatusButton: {fileID: 0}
+  attackStatusButton: {fileID: 0}
+  goHomeStatusButton: {fileID: 0}
 --- !u!1 &1107308892
 GameObject:
   m_ObjectHideFlags: 0
